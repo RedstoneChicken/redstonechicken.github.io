@@ -18,7 +18,10 @@
             <li><a href="">Stuff</a></li>
             <li><a href="">Cheap</a></li>
         </ul>
-        <button type="button"><span></span></button>
+        <button type="button"
+         onclick="toggleDB()"
+          id="DB"
+          ><span></span></button>
     </nav>
 
     <div class="main-container">
@@ -39,6 +42,14 @@
 
 </div>
 
+<script>
+    src="darkmode.js"
+    var DB = document.getElementById("DB")
 
+    function toggleDB(){
+        DB.classList.toggle("active")
+
+    }
+</script>
 </body>
 </html>
