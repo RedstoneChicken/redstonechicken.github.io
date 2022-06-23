@@ -13,8 +13,8 @@
     --secondary-color: #edf2fc;
 }
 .dark{
-    --primary-color: #1d2026;
-    --secondary-color: #edf2fc;
+    --primary-color: #edf2fc;
+    --secondary-color: #1d2026;
 }
 
 .hero{

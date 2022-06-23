@@ -7,7 +7,7 @@
     <title>Redstone Chicken's Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="bodybg">
 <div class="hero">
     <nav>
         <img src="images/menu.png" class="menu-img">
@@ -18,10 +18,7 @@
             <li><a href="">Stuff</a></li>
             <li><a href="">Cheap</a></li>
         </ul>
-        <button type="button"
-         onclick="toggleDB()"
-          id="DB"
-          ><span></span></button>
+        <button type="button" onclick="toggleDB()" id="DB"><span></span></button>
     </nav>
 
     <div class="main-container">
@@ -43,11 +40,12 @@
 </div>
 
 <script>
-    src="darkmode.js"
     var DB = document.getElementById("DB")
+    var bodybg = document.getElementById("bodybg")
 
     function toggleDB(){
         DB.classList.toggle("active")
+        bodybg.classList.toggle("dark")
 
     }
 </script>
