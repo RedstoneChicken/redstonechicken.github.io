@@ -22,8 +22,8 @@
     </nav>
 
     <div class="main-container">
-        <img src="images/bedrock.png" class="bedrock">
         <img src="images/grass.png" class="grass">
+        <img src="images/bedrock.png" class="bedrock" id="BR">
     </div>
 
     <div class="text-container">
@@ -41,11 +41,13 @@
 
 <script>
     var DB = document.getElementById("DB")
+    var BR = document.getElementById("BR")
     var bodybg = document.getElementById("bodybg")
 
     function toggleDB(){
         DB.classList.toggle("active")
         bodybg.classList.toggle("dark")
+       BR.classList.toggle("on")
 
     }
 </script>

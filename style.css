@@ -15,6 +15,7 @@
 .dark{
     --primary-color: #edf2fc;
     --secondary-color: #1d2026;
+    
 }
 
 .hero{
@@ -23,6 +24,7 @@
     width: 100%;
     color: var(--secondary-color);
     position: relative;
+    transition: background 0.5s;
 }
 nav{
     display: flex;
@@ -76,19 +78,21 @@ button span{
     left: 22%;
     width: 200px;
 }
-.bedrock{
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 700px;
-}
 .grass{
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
     width: 700px;
+}
+.bedrock{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 .text-container{
     max-width: 600px;
@@ -136,4 +140,7 @@ button span{
 .active span{
     background: #fff;
     margin-left: 31px;
+}
+.on{
+    opacity: 1;
 }
