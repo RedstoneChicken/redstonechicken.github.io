@@ -137,3 +137,11 @@ img {
     color: red;
     font-style: italic;
 }
+.down{
+    margin-top: 10%;
+    width: 100%;
+}
+.service{
+    width: 100px;
+    margin-top: 20px;
+}
