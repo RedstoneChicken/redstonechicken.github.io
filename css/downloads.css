@@ -111,3 +111,7 @@ img {
     max-width: 250%;
     height: auto;
   }
+.downloads{
+    color: red;
+    font-style: italic;
+}

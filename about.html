@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body id="bodybg">
+    
+<div class="hero">
+    <nav>
+        <img src="images/menu.png" class="menu-img">
+        <img src="images/logo.png" class="logo">
+        <ul>
+            <li><a href="index.html" target="_self">Home</a></li>
+            <li><a href="downloads.html" target="_self">Downloads</a></li>
+            <li><a href="index.html" target="_self">Stuff</a></li>
+            <li><a href="about.html" class="about" target="_self">About</a></li>
+        </ul>
+        <button type="button" onclick="toggleDB()" id="DB"><span></span></button>
+    </nav>
+
+    <div class="dtext-container">
+        <h1><center>Downloads</center></h1>
+        <p><center>Select the pack type you want to download</center></p>
+        <center><a href="">Texture Packs</a></center>
+        <center><a href="">Addons/Behavior Packs</a></center>
+    </div>
+
+</div>
+
+<script>
+    var DB = document.getElementById("DB")
+    var bodybg = document.getElementById("bodybg")
+
+    function toggleDB(){
+        DB.classList.toggle("active")
+        bodybg.classList.toggle("dark")
+
+    }
+</script>
+</body>
+</html>
