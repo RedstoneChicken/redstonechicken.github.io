@@ -81,49 +81,46 @@ button span{
 }
 .main-container{
     position: absolute;
-    top: 15%;
-    left: 22%;
-    width: 200px;
+    top: 10vw;
+    left: 20vw;
+    width: 12vw;
 }
 .grass{
     position: absolute;
-    top: 100%;
-    left: 50%;
     transform: translateX(-50%);
-    width: 700px;
 }
 .bedrock{
     position: absolute;
-    top: 100%;
-    left: 50%;
     transform: translateX(-50%);
-    width: 700px;
     opacity: 0;
     transition: opacity 0.5s;
 }
 .text-container{
-    max-width: 600px;
-    margin-top: 7%;
-    margin-left: 50%;
+    margin-top: 10vw;
+    margin-left: 40vw;
 }
 
 .text-container h1{
-    font-size: 80px;
+    font-size: 5.5vw;
     font-weight: 400;
+}
+.text-container p{
+    font-size: 1.5vw;
 }
 .text-container a{
     text-decoration: none;  
     background: #00986f;
-    padding: 14px 40px;
+    padding: 1vw 1.75vw;
     display: inline-block;
     color: #fff;
-    font-size: 18px;
-    margin-top: 30px;
-    border-radius: 30px;
+    font-size: 1.5vw;
+    margin-top: 2vw;
+    border-radius: 50px;
     transition: 0.5s;
 }
 .active{
     background: #ff0000;
+    opacity: 1;
 }
 .active span{
     background: #fff;
