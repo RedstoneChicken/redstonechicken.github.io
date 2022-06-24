@@ -99,6 +99,7 @@ button span{
     margin-top: 7%;
     margin-left: 50%;
 }
+
 .text-container h1{
     font-size: 80px;
     font-weight: 400;
@@ -113,26 +114,25 @@ button span{
     margin-top: 30px;
     border-radius: 30px;
 }
-.control{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: 150px;
+.dtext-container{
+    max-width: 600px;
+    margin-top: 7%;
+    margin-left: 50%;
+    margin-right: 50%;
 }
-.control .line{
-    width: 250px;
-    height: 4px;
-    background: #fff;
-    margin: 0 20px;
-    border-radius: 2px;
+.dtext-container h1{
+    font-size: 80px;
+    font-weight: 400;
 }
-.control .line span{
-    width: 50%;
-    height: 8px;
-    margin-top: -2px;
-    border-radius: 4px;
+.dtext-container a{
+    text-decoration: none;
     background: #00986f;
-    display: block;
+    padding: 14px 40px;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 30px;
+    border-radius: 30px;
 }
 .active{
     background: green;
@@ -144,3 +144,7 @@ button span{
 .on{
     opacity: 1;
 }
+img {
+    max-width: 250%;
+    height: auto;
+  }
