@@ -6,7 +6,7 @@
     transition: all 0.3s;
  }
 
-:root{
+ :root{
     /*    --primary-color: #edf2fc;
     --secondary-color: #1d2026;
     */
@@ -18,14 +18,16 @@
     --secondary-color: #1d2026;
     
 }
+.main{
+    color: var(--secondary-color);
+    background: var(--primary-color);
+    transition: background 0.5s;
+}
 
 .hero{
-    background: var(--primary-color);
-    min-height: 100vh;
+    min-height: 45vw;
     width: 100%;
-    color: var(--secondary-color);
     position: relative;
-    transition: background 0.5s;
 }
 nav{
     display: flex;
@@ -138,10 +140,14 @@ img {
     font-style: italic;
 }
 .down{
-    margin-top: 10%;
-    width: 100%;
+    margin-top: 0;
+    width: 90%;
 }
 .service{
-    width: 100px;
     margin-top: 20px;
+    background: var(--primary-color);
+    width: 100%;
+    color: var(--secondary-color);
+    position: relative;
+    transition: background 0.5s;
 }
