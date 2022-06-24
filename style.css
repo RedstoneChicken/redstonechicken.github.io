@@ -3,6 +3,7 @@
     padding: 0;
     font-family: 'poppins', sans-serif;
     box-sizing: border-box;
+    transition: all 0.3s;
  }
 
 :root{
@@ -53,6 +54,12 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: var(--secondary-color);
+}
+nav ul li a:hover{
+    text-decoration-line: underline;
+    text-decoration-color: red;
+    color: red;
+    transition: all 0.3s;
 }
 button{
     background: #efefef;
