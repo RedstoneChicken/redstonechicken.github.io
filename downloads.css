@@ -53,10 +53,9 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: var(--secondary-color);
+    transition: all 0.5s ease; 
 }
 nav ul li a:hover{
-    text-decoration-line: underline;
-    text-decoration-color: red;
     color: red;
     transition: all 0.3s;
 }
