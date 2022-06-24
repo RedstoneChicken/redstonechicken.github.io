@@ -143,11 +143,18 @@ img {
     margin-top: 0;
     width: 90%;
 }
-.service{
+.secondmain{
     margin-top: 20px;
     background: var(--primary-color);
     width: 100%;
     color: var(--secondary-color);
     position: relative;
     transition: background 0.5s;
+}
+#services{
+    padding: 80px 0;
+}
+.service{
+    width: 10px;
+    margin-top: 20px;
 }
