@@ -31,7 +31,6 @@ nav{
     display: flex;
     align-items: center;
     padding: 20px 8%;
-    transition: color 0.5s;
 }
 nav .menu-img{
     width: 25px;
@@ -79,48 +78,24 @@ button span{
     margin-left: 2px;
     transition: background 0.5s, margin-left 0.5s;
 }
-.main-container{
-    position: absolute;
-    top: 15%;
-    left: 22%;
-    width: 200px;
-}
-.grass{
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 700px;
-}
-.bedrock{
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 700px;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-.text-container{
-    max-width: 600px;
+.dtext-container{
+    max-width: auto;
     margin-top: 7%;
-    margin-left: 50%;
 }
-
-.text-container h1{
+.dtext-container h1{
     font-size: 80px;
     font-weight: 400;
 }
-.text-container a{
-    text-decoration: none;  
+.dtext-container a{
+    text-decoration: none;
     background: #00986f;
     padding: 14px 40px;
     display: inline-block;
     color: #fff;
     font-size: 18px;
     margin-top: 30px;
+    position: relative;
     border-radius: 30px;
-    transition: 0.5s;
 }
 .active{
     background: #ff0000;
