@@ -93,9 +93,17 @@ button span{
     display: inline-block;
     color: #fff;
     font-size: 18px;
-    margin-top: 30px;
-    position: relative;
     border-radius: 30px;
+}
+.text-container a{
+    text-decoration: none;
+    background: #00986f;
+    padding: 14px 40px;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 30px;
+    margin-top: 3vw;
 }
 .active{
     background: #ff0000;
@@ -115,3 +123,8 @@ img {
     color: red;
     font-style: italic;
 }
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
