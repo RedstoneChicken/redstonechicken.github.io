@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Redstone Chicken's Official Website</title>
+    <link rel="stylesheet" href="css/test.css">
+<body class="main" id="bodybg">
+    <div class="hero">
+        <nav>
+            <img src="images/menu2.png" class="menu-img">
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="index.html" class="home" target="_self">Home</a></li>
+                <li><a href="downloads.html" target="_self">Downloads</a></li>
+                <li><a href="test.html" target="_self">Stuff</a></li>
+                <li><a href="about.html" target="_self">About</a></li>
+            </ul>
+            <button type="button" onclick="toggleDB()" id="DB"><span></span></button>
+        </nav>
+        </div>
   <body>
-
-    <div class="testimonials">
+    <div class="stuff">
       <div class="inner">
         <h1>Testimonials</h1>
         <div class="border"></div>
@@ -16,7 +29,7 @@
         <div class="row">
           <div class="col">
             <div class="testimonial">
-              <img src="p1.png" alt="">
+              <img src="images/p1.png" alt="">
               <div class="name">Full name</div>
               <div class="stars">
                 <i class="fas fa-star"></i>
@@ -34,7 +47,7 @@
 
           <div class="col">
             <div class="testimonial">
-              <img src="p2.png" alt="">
+              <img src="images/p2.png" alt="">
               <div class="name">Full name</div>
               <div class="stars">
                 <i class="fas fa-star"></i>
@@ -52,7 +65,7 @@
 
           <div class="col">
             <div class="testimonial">
-              <img src="p3.png" alt="">
+              <img src="images/p3.png" alt="">
               <div class="name">Full name</div>
               <div class="stars">
                 <i class="fas fa-star"></i>
@@ -72,4 +85,17 @@
     </div>
 
   </body>
+  <script>
+    var DB = document.getElementById("DB")
+    var BR = document.getElementById("BR")
+    var bodybg = document.getElementById("bodybg")
+
+    function toggleDB(){
+        DB.classList.toggle("active")
+        bodybg.classList.toggle("dark")
+       BR.classList.toggle("on")
+
+    }
+</script>
+</body>
 </html>
