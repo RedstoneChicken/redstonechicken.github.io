@@ -37,7 +37,7 @@ nav{
 }
 nav .menu-img{
     width: 2.25%;
-    margin-right: 20px;
+    margin-right: 1%;
     cursor: pointer;
 }
 nav .logo{
@@ -111,10 +111,10 @@ button span{
     font-size: 1.5vw;
 }
 .text-container a{
-    text-decoration: none;  
     background: #00986f;
     padding: 1vw 1.75vw;
     display: inline-block;
+    text-decoration: none;  
     color: #fff;
     font-size: 1.5vw;
     margin-top: 2vw;
@@ -162,19 +162,22 @@ img {
     padding: 30px;
     border-radius: 20px;
   }
+  .testimonial p{
+    color: var(--primary-color);
+  }
   .inner{
-    
+    text-align: center;
     font-family: 'poppins', sans-serif;
-    font-size: 1.5vw;
-    margin-top: 1vw;
+    font-size: 2vw;
+    margin-top: 2vw;
+    color: var(--secondary-color);
+    margin-bottom: 100px;
   }
   .testimonial img{
-    cursor: pointer;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 50%;
   }
   .name{
     font-size: 2vw;
     margin: 20px 0;
+    color: var(--primary-color);
   }
