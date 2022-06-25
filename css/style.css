@@ -36,12 +36,12 @@ nav{
     transition: color 0.5s;
 }
 nav .menu-img{
-    width: 25px;
+    width: 2.25%;
     margin-right: 20px;
     cursor: pointer;
 }
 nav .logo{
-    width: 160px;
+    width: 12vw;
     cursor: pointer;
 }
 nav ul{
@@ -83,15 +83,16 @@ button span{
 }
 .main-container{
     position: absolute;
-    top: 10vw;
     left: 20vw;
     width: 12vw;
 }
 .grass{
     position: absolute;
+    margin-top: 4.5vw;
     transform: translateX(-50%);
 }
 .bedrock{
+    margin-top: 4.5vw;
     position: absolute;
     transform: translateX(-50%);
     opacity: 0;
@@ -140,10 +141,40 @@ img {
     font-style: italic;
 }
 .down{
-    margin-top: 0;
+    margin-top: 37.5px;
     width: 90%;
 }
 /*services*/
-.serves{
-    margin-top: 30px;
-}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .col{
+    flex: 33.33%;
+    max-width: 33.33%;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+  .testimonial{
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    padding: 30px;
+    border-radius: 20px;
+  }
+  .inner{
+    
+    font-family: 'poppins', sans-serif;
+    font-size: 1.5vw;
+    margin-top: 1vw;
+  }
+  .testimonial img{
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .name{
+    font-size: 2vw;
+    margin: 20px 0;
+  }

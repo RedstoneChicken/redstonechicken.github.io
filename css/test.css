@@ -82,8 +82,8 @@ button span{
 }
   .stuff{
     padding: 40px 0;
-    background: #f1f1f1;
-    color: #434343;
+    color: var(--secondary-color);
+    background: var(--primary-color);
     text-align: center;
   }
   .inner{
@@ -112,7 +112,8 @@ button span{
     padding: 15px;
   }
   .testimonial{
-    background: #fff;
+    color: var(--primary-color);
+    background: var(--secondary-color);
     padding: 30px;
   }
   .testimonial img{
@@ -124,23 +125,3 @@ button span{
     font-size: 20px;
     margin: 20px 0;
   }
-  .stars{
-    color: #6ab04c;
-    margin-bottom: 20px;
-  }
-  
-  
-  @media screen and (max-width:960px) {
-  .col{
-    flex: 100%;
-    max-width: 80%;
-  }
-  }
-  
-  @media screen and (max-width:600px) {
-  .col{
-    flex: 100%;
-    max-width: 100%;
-  }
-  }
-  
