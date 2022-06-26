@@ -2,55 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-
-    Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Downloads - Redstone Chicken's Official Website</title>
+    <title>Redstone Chicken's Official Website</title>
     <link rel="stylesheet" href="css/downloads.css">
     <link rel="icon" href="images/rsc.png">
 </head>
-<body id="bodybg">
+<body class="main" id="bodybg">
     
 <div class="hero">
     <nav>
-        <img src="images/menu.png" class="menu-img">
+        <img src="images/menu2.png" class="menu-img">
         <img src="images/logo.png" class="logo">
         <ul>
-            <li><a href="index.html" target="_self">Home</a></li>
-            <li><a href="downloads.html" class="downloads" target="_self">Downloads</a></li>
+            <li><a href="index.html"  target="_self">Home</a></li>
+            <li><a href="downloads.html" class="home" target="_self">Downloads</a></li>
             <li><a href="test.html" target="_self">Stuff</a></li>
             <li><a href="about.html" target="_self">About</a></li>
         </ul>
         <button type="button" onclick="toggleDB()" id="DB"><span></span></button>
     </nav>
 
-    <div class="dtext-container">
-        <h1><center>Downloads</center></h1>
-        <p><center>Select the pack type you want to download</center></p>
-    </div>
-
-    <div class="row">
-        <div class="text-container a">
-            <center><a href="">Texture Packs</a></center>
-        </div>
-        
-        <div class="text-container a">
-            <center><a href="">Addons/Behavior Packs</a></center>
-        </div>
-
-
-    </div>
-
-
+    <div class="text-container"><center>
+        <h1>Downloads</h1>
+        <p>Where you can find amazing creations you can try it out for your self!</p>
+    </div></center>
 </div>
+<body>
+    <div class="stuff">
+      <div class="inner">
+        <div class="border"></div>
+
+        <div class="row">
+          <div class="col">
+            <div class="testimonial">
+                <a href="downloads.html" style="text-decoration: none;">
+                    <img src="images/p1.png">
+              <div class="name">Texture Packs</div>
+              <p>
+                Texture packs change how your Minecraft will look ingame. Texture packs are client side and also known as resource packs.
+              </p>
+            </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="testimonial">
+                <a href="downloads.html" style="text-decoration: none;">
+                    <img src="images/p2.png">
+              <div class="name">Addons & Behavior Packs</div>
+              <p>
+                Addons and Behavior packs changes how the game functions.<br>These effect your world/game directly.
+              </p>
+                </a>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="testimonial">
+                <a href="downloads.html" style="text-decoration: none;">
+                    <img src="images/p3.png">
+              <div class="name">Past Videos & Streams</div>
+              <p>
+                You can check my past YouTube videos and streams. You can also find links to my other social media platforms as well!!
+              </p>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer" id="footer">
+      <footer>
+        <div class="fcontent">
+
+          <div class="top">
+            <span class="ip">RedstoneChicken.com</span>
+            <div class="fdesc">
+              <span>Where you can find amazing creations you can try it out for your self!</span>
+            </div>
+            
+          <div class="fright"> 
+            <a href=""><img src="images/rsc.png"></a>
+        </div>
+          </div>
+
+
+        </div>
+      </footer>
+    </div>
+
 
 <script>
     var DB = document.getElementById("DB")
+    var BR = document.getElementById("BR")
     var bodybg = document.getElementById("bodybg")
 
     function toggleDB(){
         DB.classList.toggle("active")
         bodybg.classList.toggle("dark")
+       BR.classList.toggle("on")
 
     }
 </script>
