@@ -160,6 +160,9 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
   }
   .col{
     flex: 33.33%;
@@ -211,8 +214,8 @@ img {
 }
 
 .fright {
-    width: 5vw;
-    margin-right: 6%;
+    width: 3.5vw;
+    margin-right: 5.6%;
     align-content: center;
 }
 .top .ip {
