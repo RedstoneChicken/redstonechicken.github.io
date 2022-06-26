@@ -73,6 +73,7 @@ nav ul li a:hover{
     transition: all 0.3s;
 }
 button{
+    margin: 0 1%;
     background: #efefef;
     height: 30px;
     width: 60px;
