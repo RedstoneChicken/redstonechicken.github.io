@@ -211,14 +211,18 @@ img {
 }
 
 .fright {
-    width: 55px;
-    
+    width: 5vw;
+    margin-right: 6%;
+    align-content: center;
 }
 .top .ip {
     font-size: 2vw;
     color: var(--pri);
+    position: absolute;
 }
 .fdesc {
     font-size: 1vw;
     color: var(--pri);
+    margin-right: 30%;
+    margin-top: 2.5%;
 }
