@@ -33,7 +33,16 @@
     position: relative;
 }
 nav{
-
+    display: flex;
+    align-items: center;
+    transition: color 0.5s;
+    background-color: var(--sec);
+    flex: 1;
+    justify-content: right;    
+    padding: 1em 3em;
+    margin-right: 15px;
+    margin-left: 15px;
+    border-radius: 7px;
 }
 nav .menu-img{
     width: 2.25%;
