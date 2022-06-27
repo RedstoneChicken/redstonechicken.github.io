@@ -63,7 +63,7 @@ nav ul li{
     margin: 0 1%;
 }
 nav ul li a{
-    font-size: 110%;
+    font-size: 1.5vw;
     text-decoration: none;
     color: var(--secondary-color);
     transition: all 0.5s ease; 
@@ -211,6 +211,7 @@ img {
     padding: 2% 2% 2%;
     display: flex;
     justify-content: space-between;
+
 }
 
 .fright {
