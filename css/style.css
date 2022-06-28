@@ -4,7 +4,6 @@
     font-family: 'poppins', sans-serif;
     box-sizing: border-box;
     transition: all 0.3s;
-    padding: ;
  }
 
  :root{
@@ -99,6 +98,7 @@ button span{
     position: absolute;
     left: 20vw;
     width: 12vw;
+    
 }
 .grass{
     position: absolute;
@@ -156,6 +156,7 @@ img {
 }
 .down{
     margin-top: 35px;
+    
     width: 90%;
 }
 /*services*/
@@ -164,8 +165,8 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 2%;
-    margin-left: 1%;
-    margin-right: 1%;
+    margin-right: 8vw;
+    margin-left: 8vw;
   }
   .col{
     flex: 33.33%;
