@@ -5,31 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redstone Chicken's Official Website</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <link rel="icon" href="images/rsc.png">
 </head>
 <body class="main" id="bodybg">
     
-<div class="hero">
-    <nav>
+    <div class="hero">
+        <nav>
         <img src="images/menu2.png" class="menu-img">
-        <img src="images/logo.png" class="logo">
-            <div class="topnav" id="myTopnav">
-                <a href="index.html" class="home" target="_self">Home</a>
-                <a href="downloads.html" target="_self">Downloads</a>
-                <a href="test.html" target="_self">Stuff</a>
-               <a href="about.html" target="_self">About</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                  <i class="fa fa-bars"></i>
-                </a>
-              </div>
-        <button type="button" onclick="toggleDB()" id="DB"><span></span></button>
-    </nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="index.html" class="home" target="_self">Home</a></li>
+                <li><a href="downloads.html" target="_self">Downloads</a></li>
+                <li><a href="test.html" target="_self">Stuff</a></li>
+                <li><a href="about.html" target="_self">About</a></li>
+            </ul>
+            <button type="button" onclick="toggleDB()" id="DB"><span></span></button>
+        </nav>
 
-    <div class="main-container">
+        <div class="main-container"><center>
         <img src="images/grass.png" class="grass">
         <img src="images/bedrock.png" class="bedrock" id="BR">
-    </div>
+    </center></div>
 
     <div class="text-container">
         <h1>Redstone Chicken's Official Website (MOBILE)</h1>
@@ -103,7 +100,16 @@
         </div>
       </footer>
     </div>
-
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+        </script>
 <script>
     var DB = document.getElementById("DB")
     var BR = document.getElementById("BR")
