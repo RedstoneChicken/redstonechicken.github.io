@@ -48,12 +48,12 @@ nav{
     border-radius: 7px;
 }
 nav .menu-img{
-    width: 2.25%;
+    width: 4.25%;
     margin-right: 1%;
     cursor: pointer;
 }
 nav .logo{
-    width: 12vw;
+    width: 22vw;
     cursor: pointer;
 }
 nav ul{
@@ -66,7 +66,7 @@ nav ul li{
     margin: 0 1%;
 }
 nav ul li a{
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     text-decoration: none;
     color: var(--secondary-color);
     transition: all 0.5s ease; 
