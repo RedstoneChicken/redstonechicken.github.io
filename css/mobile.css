@@ -78,8 +78,8 @@ nav ul li a:hover{
 button{
     margin: 0 1%;
     background: #efefef;
-    height: 30px;
-    width: 60px;
+    height: 8vw;
+    width: 16vw;
     border-radius: 20px;
     border: 0;
     outline: 0;
@@ -96,15 +96,18 @@ button span{
     transition: background 0.5s, margin-left 0.5s;
 }
 .main-container{
+    padding-top: 6vw;
 }
 .grass{
     position: absolute;
-    margin-top: 4.5vw;
+    width: 60%;
+    margin-left: 19.85vw;
 }
 .bedrock{
-    margin-top: 4.5vw;
     position: absolute;
     opacity: 0;
+    width: 60%;
+    margin-left: 19.85vw;
     transition: opacity 0.5s;
 }
 .text-container{
@@ -120,12 +123,12 @@ button span{
 }
 .text-container a{
     background: #00986f;
-    padding: 1vw 1.75vw;
+    padding: 2.5vw 3.25vw;
     display: inline-block;
     text-decoration: none;  
     color: #fff;
-    font-size: 1.5vw;
-    margin-top: 2vw;
+    font-size: 3vw;
+    margin-top: 2.5vw;
     border-radius: 50px;
     transition: 0.5s;
 }
@@ -149,7 +152,7 @@ img {
     font-style: italic;
 }
 .down{
-    margin-top: 35px;
+    padding-top: 65vw;
     width: 90%;
 }
 /*services*/
