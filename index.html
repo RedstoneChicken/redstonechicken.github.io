@@ -15,10 +15,15 @@
         <img src="images/menu2.png" class="menu-img">
         <img src="images/logo.png" class="logo">
         <ul>
-            <li><a href="index.html" class="home" target="_self">Home</a></li>
-            <li><a href="downloads.html" target="_self">Downloads</a></li>
-            <li><a href="test.html" target="_self">Stuff</a></li>
-            <li><a href="about.html" target="_self">About</a></li>
+          <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
         </ul>
         <button type="button" onclick="toggleDB()" id="DB"><span></span></button>
     </nav>
@@ -115,6 +120,16 @@
         }
         //-->
         </script>
+        <script>
+          function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+              x.className += " responsive";
+            } else {
+              x.className = "topnav";
+            }
+          }
+          </script>
 <script>
     var DB = document.getElementById("DB")
     var BR = document.getElementById("BR")
