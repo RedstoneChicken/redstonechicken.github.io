@@ -14,12 +14,14 @@
     --secondary-color: #edf2fc;
     --sec: #121418;
     --pri: rgba(255,255,255, 0.3);
+    --secs: #edf2fc;
 }
 .dark{
     --primary-color: #edf2fc;
     --secondary-color: #1d2026;
     --sec: #bcc0c9;
     --pri: rgba(51, 43, 43, 0.3);
+    --secs: #121418;
 }
 .main{
     color: var(--secondary-color);
@@ -172,7 +174,7 @@ img {
   }
   .testimonial{
     color: var(--primary-color);
-    background: var(--secondary-color);
+    background: var(--secs);
     padding: 30px;
     border-radius: 20px;
   }
@@ -223,6 +225,7 @@ img {
     font-size: 2vw;
     color: var(--pri);
     position: absolute;
+    cursor: pointer;
 }
 .fdesc {
     font-size: 1vw;
