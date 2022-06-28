@@ -80,7 +80,7 @@ button{
     background: #efefef;
     height: 8vw;
     width: 16vw;
-    border-radius: 20px;
+    border-radius: 10vw;
     border: 0;
     outline: 0;
     cursor: pointer;
@@ -89,8 +89,8 @@ button{
 button span{
     display: block;
     background: #999;
-    height: 26px;
-    width: 26px;
+    height: 7vw;
+    width: 7vw;
     border-radius: 50%;
     margin-left: 2px;
     transition: background 0.5s, margin-left 0.5s;

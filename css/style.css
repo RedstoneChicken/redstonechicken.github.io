@@ -42,9 +42,9 @@ nav{
     background-color: var(--sec);
     flex: 1;
     justify-content: right;    
-    padding: 1em 3em;
-    margin-right: 15px;
-    margin-left: 15px;
+    padding: 0.74vw 1.9vw;
+    margin-right: 8vw;
+    margin-left: 8vw;
     border-radius: 7px;
 }
 nav .menu-img{
