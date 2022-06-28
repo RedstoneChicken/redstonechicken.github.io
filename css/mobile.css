@@ -96,11 +96,6 @@ button span{
     transition: background 0.5s, margin-left 0.5s;
 }
 .main-container{
-    position: absolute;
-    width: 20vw;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    align-content: center;
 }
 .grass{
     position: absolute;
@@ -114,7 +109,6 @@ button span{
 }
 .text-container{
     margin-top: 10vw;
-    margin-left: 40vw;
 }
 
 .text-container h1{
