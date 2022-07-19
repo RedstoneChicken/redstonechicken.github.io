@@ -15,6 +15,7 @@
     --sec: #121418;
     --pri: rgba(255,255,255, 0.3);
     --secs: #edf2fc;
+    --count-transition: all 1s cubic-bezier(0.33, 0.74, 0.28, 0.82) !important;
 }
 .dark{
     --primary-color: #edf2fc;
@@ -222,6 +223,7 @@ img {
     width: 3.5vw;
     margin-right: 5.6%;
     align-content: center;
+    
 }
 .top .ip {
     font-size: 2vw;
