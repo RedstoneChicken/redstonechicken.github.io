@@ -103,7 +103,7 @@ button span{
 }
 .text-container{
     margin-top: 10vw;
-    width: 80%;
+    width: 75%;
 }
 
 .text-container h1{
@@ -111,18 +111,7 @@ button span{
     font-weight: 400;
 }
 .text-container p{
-    font-size: 1.5vw;
-}
-.text-container a{
-    background: #00986f;
-    padding: 1vw 1.75vw;
-    display: inline-block;
-    text-decoration: none;  
-    color: #fff;
-    font-size: 1.5vw;
-    margin-top: 2vw;
-    border-radius: 50px;
-    transition: 0.5s;
+    font-size: 2vw;
 }
 .active{
     background: #ff0000;
