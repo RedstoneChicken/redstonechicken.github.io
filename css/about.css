@@ -15,6 +15,7 @@
     --sec: #121418;
     --pri: rgba(255,255,255, 0.3);
     --secs: #edf2fc;
+    --count-transition: all 1s cubic-bezier(0.33, 0.74, 0.28, 0.82) !important;
 }
 .dark{
     --primary-color: #edf2fc;
@@ -41,9 +42,9 @@ nav{
     background-color: var(--sec);
     flex: 1;
     justify-content: right;    
-    padding: 1em 3em;
-    margin-right: 15px;
-    margin-left: 15px;
+    padding: 0.74vw 1.9vw;
+    margin-right: 6.5vw;
+    margin-left: 6.5vw;
     border-radius: 7px;
 }
 nav .menu-img{
@@ -94,8 +95,15 @@ button span{
     margin-left: 2px;
     transition: background 0.5s, margin-left 0.5s;
 }
+.main-container{
+    position: absolute;
+    left: 20vw;
+    width: 12vw;
+    
+}
 .text-container{
     margin-top: 10vw;
+    width: 80%;
 }
 
 .text-container h1{
@@ -145,8 +153,8 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 2%;
-    margin-left: 1%;
-    margin-right: 1%;
+    margin-right: 8vw;
+    margin-left: 8vw;
   }
   .col{
     flex: 33.33%;
@@ -202,6 +210,7 @@ img {
     width: 3.5vw;
     margin-right: 5.6%;
     align-content: center;
+    
 }
 .top .ip {
     font-size: 2vw;
