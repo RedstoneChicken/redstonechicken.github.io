@@ -17,13 +17,6 @@
     --secs: #edf2fc;
     --count-transition: all 1s cubic-bezier(0.33, 0.74, 0.28, 0.82) !important;
 }
-.dark{
-    --primary-color: #edf2fc;
-    --secondary-color: #1d2026;
-    --sec: #bcc0c9;
-    --pri: rgba(51, 43, 43, 0.3);
-    --secs: #121418;
-}
 .main{
     color: var(--secondary-color);
     background: var(--primary-color);
@@ -55,6 +48,10 @@ nav .menu-img{
 nav .logo{
     width: 12vw;
     cursor: pointer;
+}
+nav .icon{
+    margin-left: 1%;
+    width: 5%;
 }
 nav ul{
     flex: 1;
@@ -106,13 +103,6 @@ button span{
     margin-top: 4.5vw;
     transform: translateX(-50%);
 }
-.bedrock{
-    margin-top: 4.5vw;
-    position: absolute;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.5s;
-}
 .text-container{
     margin-top: 10vw;
     margin-left: 40vw;
@@ -135,17 +125,6 @@ button span{
     margin-top: 2vw;
     border-radius: 50px;
     transition: 0.5s;
-}
-.active{
-    background: #ff0000;
-    opacity: 1;
-}
-.active span{
-    background: #fff;
-    margin-left: 31px;
-}
-.on{
-    opacity: 1;
 }
 img {
     max-width: 250%;
