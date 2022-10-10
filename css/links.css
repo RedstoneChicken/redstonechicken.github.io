@@ -98,14 +98,9 @@ button span{
     width: 12vw;
     
 }
-.grass{
-    position: absolute;
-    margin-top: 4.5vw;
-    transform: translateX(-50%);
-}
 .text-container{
     margin-top: 10vw;
-    margin-left: 40vw;
+    width: 75%;
 }
 
 .text-container h1{
@@ -113,18 +108,7 @@ button span{
     font-weight: 400;
 }
 .text-container p{
-    font-size: 1.5vw;
-}
-.text-container a{
-    background: #00986f;
-    padding: 1vw 1.75vw;
-    display: inline-block;
-    text-decoration: none;  
-    color: #fff;
-    font-size: 1.5vw;
-    margin-top: 2vw;
-    border-radius: 50px;
-    transition: 0.5s;
+    font-size: 2vw;
 }
 img {
     max-width: 250%;
@@ -136,7 +120,6 @@ img {
 }
 .down{
     margin-top: 35px;
-    
     width: 90%;
 }
 /*services*/
