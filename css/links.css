@@ -154,6 +154,13 @@ img {
     color: var(--secondary-color);
     margin-bottom: 100px;
   }
+  .inners{
+    text-align: center;
+    font-family: 'poppins', sans-serif;
+    font-size: 1.75vw;
+    color: var(--secondary-color);
+    margin-bottom: 100px;
+  }
   .testimonial img{
     width: 50%;
   }
