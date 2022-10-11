@@ -22,7 +22,15 @@
     background: var(--primary-color);
     transition: background 0.5s;
 }
-
+body{
+    animation-name: ani;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes ani {
+    100%   {opacity: 100;}
+    0%  {opacity: 0;}
+  }
 .hero{
 
     width: 100%;
@@ -152,14 +160,7 @@ img {
     font-size: 1.75vw;
     margin-top: 2vw;
     color: var(--secondary-color);
-    margin-bottom: 100px;
-  }
-  .inners{
-    text-align: center;
-    font-family: 'poppins', sans-serif;
-    font-size: 1.75vw;
-    color: var(--secondary-color);
-    margin-bottom: 100px;
+    margin-bottom: 9px;
   }
   .testimonial img{
     width: 50%;

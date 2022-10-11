@@ -23,6 +23,15 @@
     transition: background 0.5s;
 }
 
+body{
+    animation-name: ani;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes ani {
+    100%   {opacity: 100;}
+    0%  {opacity: 0;}
+  }
 .hero{
     min-height: 45vw;
     width: 100%;
@@ -99,7 +108,7 @@ button span{
     
 }
 .grass{
-    position: absolute;
+    
     margin-top: 4.5vw;
     transform: translateX(-50%);
 }

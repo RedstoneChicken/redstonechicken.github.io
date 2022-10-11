@@ -22,7 +22,15 @@
     background: var(--primary-color);
     transition: background 0.5s;
 }
-
+body{
+    animation-name: ani;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes ani {
+    100%   {opacity: 100;}
+    0%  {opacity: 0;}
+  }
 .hero{
     min-height: 45vw;
     width: 100%;
