@@ -5,7 +5,7 @@
     <img src="images/logo.png" alt="Logo" width="295" height="84">
   </a>
 
-<h3 align="center">Welcome toRedstone Chicken's Official Website's Github!</h3>
+<h3 align="center">Redstone Chicken's Official Website</h3>
 
   <p align="center">
     This is the source code to Redstone Chicken's Website.
