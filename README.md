@@ -25,7 +25,6 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
