@@ -49,8 +49,8 @@ Redstone Chicken - [Redstone Chicken#0001] (https://dsc.gg/rscbuilds)
 Project Link: [https://github.com/RedstoneChicken/RedstoneChicken.github.io/
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- Credits -->
+<!-- CREDITS -->
 
-##credits
+## Credits
 
 Read me template used - [https://github.com/othneildrew/Best-README-Template]
