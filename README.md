@@ -27,6 +27,7 @@
   <ol>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#credits">Credits</a></li>
   </ol>
 </details>
 
@@ -47,3 +48,9 @@ Redstone Chicken - [Redstone Chicken#0001] (https://dsc.gg/rscbuilds)
 
 Project Link: [https://github.com/RedstoneChicken/RedstoneChicken.github.io/
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Credits -->
+
+##credits
+
+Read me template used - [https://github.com/othneildrew/Best-README-Template]
