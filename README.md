@@ -46,7 +46,7 @@
 Redstone Chicken - [@redstonechicke1](https://twitter.com/redstonechicke1)
 Redstone Chicken - [Redstone Chicken#0001] (https://dsc.gg/rscbuilds)
 
-Project Link: [https://github.com/RedstoneChicken/RedstoneChicken.github.io/
+Project Link: [https://github.com/RedstoneChicken/RedstoneChicken.github.io/]
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CREDITS -->
