@@ -115,6 +115,17 @@ button span{
     font-size: 5.5vw;
     font-weight: 400;
 }
+.text-container a{
+    background: #00986f;
+    padding: 1vw 1.75vw;
+    display: inline-block;
+    text-decoration: none;  
+    color: #fff;
+    font-size: 1.5vw;
+    margin-top: 2vw;
+    border-radius: 50px;
+    transition: 0.5s;
+}
 .text-container p{
     font-size: 2vw;
 }
