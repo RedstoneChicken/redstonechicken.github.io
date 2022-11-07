@@ -58,8 +58,8 @@ nav .logo{
     cursor: pointer;
 }
 nav .icon{
-    margin-left: 1%;
-    width: 5%;
+    margin-left: 0.7%;
+    width: 4%;
 }
 nav ul{
     flex: 1;
@@ -185,6 +185,8 @@ img {
   .name{
     font-size: 2.5vw;
     margin: 20px 0;
+    max-height: 5vw;
+    min-height: 5vw;
     color: var(--primary-color);
   }
   /*footer*/
