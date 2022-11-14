@@ -797,7 +797,7 @@ html, body {
 
 .overlay:before {
   content: '';
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -823,13 +823,14 @@ html, body {
 .hero-text h1 {
     position: relative;
     margin: 0;
+    color: #ffffff;
 }
 
 .hero-text p {
     position: relative;
     margin: 45px 0 30px;
     font-size: 20px;
-    color: #26272d;
+    color: #ffffff;
 }
 
 .hero-text .btn {
