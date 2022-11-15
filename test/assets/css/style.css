@@ -35,6 +35,15 @@
 
 /* CUSTOM RESETS
 ================================================== */
+@font-face {
+    font-family: 'minecraftchmc';
+    src: url(../fonts/minecraftchmc-dblx-webfont.eot);
+    src: url(../fonts/minecraftchmc-dblx-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/minecraftchmc-dblx-webfont.ttf) format('truetype'),
+         url(../fonts/minecraftchmc-dblx-webfont.svg#minecraftchmcmedium) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 a {
     transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
@@ -797,7 +806,7 @@ html, body {
 
 .overlay:before {
   content: '';
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -824,13 +833,14 @@ html, body {
     position: relative;
     margin: 0;
     color: #ffffff;
+    font-family: 'minecraftchmc';
 }
-
 .hero-text p {
     position: relative;
     margin: 45px 0 30px;
     font-size: 20px;
     color: #ffffff;
+    font-family: 'minecraftchmc';
 }
 
 .hero-text .btn {
