@@ -56,7 +56,7 @@ a {
 
 a:focus,
 a:hover {
-    color: #6fc754;
+    color: red;
     outline: 0 none;
     text-decoration: none;
 }
@@ -118,7 +118,7 @@ p + p {
 }
 
 .btn-green {
-    background-color: #6fc754;
+    background-color: red;
     color: #fff;  
 }
 
@@ -132,7 +132,7 @@ button.btn:focus {
 
 .btn-gray:hover,
 .btn-gray:focus {
-    background-color: #6fc754;
+    background-color: red;
     color: #fff;    
 }
 
@@ -241,7 +241,7 @@ input[type=radio] {
     width: 20px;
     border-radius: 3px;
     color: #fff;
-    background-color: #6fc754;
+    background-color: red;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -278,12 +278,12 @@ input[type=radio] {
 
 .checkbox [type="checkbox"]:checked:focus + label:before,
 .checkbox [type="checkbox"]:not(:checked):focus + label:before {
-    border: 1px dotted #6fc754;
+    border: 1px dotted red;
 }
 
 .checkbox [type="checkbox"]:not(:checked) + label:hover:before,
 .checkbox [type="checkbox"]:checked + label:hover:before {
-    border: 1px solid #6fc754;
+    border: 1px solid red;
 }
 
 /* Radiobutton fields */
@@ -331,7 +331,7 @@ input[type=radio] {
     height: 12px;
     top: 50%;
     left: 4px;
-    background-color: #6fc754;
+    background-color: red;
     border-radius: 50px;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -369,12 +369,12 @@ input[type=radio] {
 
 .radio-btn [type="radio"]:checked:focus + label:before,
 .radio-btn [type="radio"]:not(:checked):focus + label:before {
-    border: 1px dotted #6fc754;
+    border: 1px dotted red;
 }
 
 .radio-btn [type="radio"]:checked + label:hover:before,
 .radio-btn [type="radio"]:not(:checked) + label:hover:before {
-    border: 1px solid #6fc754;
+    border: 1px solid red;
 }
 
 /* Selectpicker */
@@ -446,7 +446,7 @@ select {
 }
 
 .bootstrap-select .selected {
-    color: #6fc754;
+    color: red;
 }
 
 .bootstrap-select .check-mark {
@@ -468,8 +468,8 @@ select {
 
 .nav-tabs.tab-style > li.active > a,
 .nav-tabs.tab-style > li > a:hover {
-    border: 1px solid #6fc754;
-    background-color: #6fc754;
+    border: 1px solid red;
+    background-color: red;
     color: #fff;
 }
 
@@ -544,7 +544,7 @@ select {
 .accordion .panel-heading a.collapsed:hover,
 .accordion.accordion-gray .panel-heading a.collapsed:hover,
 .accordion .panel-heading a {
-    background-color: #6fc754;   
+    background-color: red;   
     color: #fff; 
 }
 
@@ -592,7 +592,7 @@ select {
 .pagination > li.active > a,
 .pagination > li > a:hover,
 .pagination > li.active > a:hover {
-  background-color: #6fc754;
+  background-color: red;
   color: #fff;
 }
 
@@ -667,10 +667,15 @@ html, body {
 }
 
 /* Site-logo */
+nav .logo{
+    width: 12vw;
+    cursor: pointer;
+}
 .site-title {
     font-size: 18px;
     line-height: 26px;
-    color: #ffffff;
+    color: white;
+    font-family: 'minecraftchmc';
 }
 
 .site-title:hover {
@@ -682,7 +687,7 @@ html, body {
 }
 
 .site-title a:hover {
-    color: #fff;
+    color: red;
 }
 
 /* Navigation */
@@ -700,7 +705,7 @@ html, body {
     padding: 0;
     font-size: 16px;
     position: relative;
-    color: #26272d;
+    color: white;
     line-height: 26px;
 }
 
@@ -734,7 +739,7 @@ html, body {
 .slicknav_open .slicknav_arrow,
 .slicknav_nav > li a:hover {
     background-color: transparent;
-    color: #6fc754;
+    color: red;
 }
 
 .navbar-toggle {
@@ -767,7 +772,7 @@ html, body {
     border-radius: 0;
     min-width: 130px;
     border: 0;
-    border-top: 5px solid #6fc754;
+    border-top: 5px solid red;
     top: 140%;
     transition: all 0.4s;
     -moz-transition: all 0.4s;
@@ -890,7 +895,7 @@ html, body {
 }
 
 .subpage-hero a:hover {
-    color: #6fc754;
+    color: red;
 }
 
 .portfolio-hero {
@@ -1159,7 +1164,7 @@ html, body {
 
 .list-unstyled li a:hover,
 .list-unstyled li.active a {
-    color: #6fc754;
+    color: red;
 }
 
 /* Copyright */
@@ -1265,7 +1270,7 @@ a.linkedin-bg:hover {
 }
 
 .portfolio-sorting li .active {
-    background-color: #6fc754;
+    background-color: red;
     color: #fff;  
     box-shadow: none;   
 }
@@ -1395,12 +1400,12 @@ a.linkedin-bg:hover {
 }
 
 .post-content .read-more:hover:after {
-    background-color: #6fc754; 
+    background-color: red; 
 }
 
 .blog-post a:hover + .post-content .post-title a,
 .post-content a:hover {
-    color: #6fc754;
+    color: red;
 }
 
 .post-meta {
