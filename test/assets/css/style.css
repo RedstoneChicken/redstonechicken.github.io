@@ -44,6 +44,22 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'default';
+    src:
+         url(../fonts/Panton-BlackCaps.otf) format('truetype'),
+         url(../fonts/Panton-BlackCaps.svg.otf) format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'default-small';
+    src:
+         url(../fonts/Panton-LightCaps.otf) format('truetype'),
+         url(../fonts/Panton-LightCaps.svg.otf) format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
 a {
     transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
@@ -653,7 +669,7 @@ html, body {
     display: flex;
     align-items: center;
     position: absolute;
-    background-color: #1d2026;
+    background-color: #121418;
     width: 100%;
     z-index: 3;
     flex: 1;
@@ -805,7 +821,8 @@ nav .logo{
 /* HERO
 ================================================== */
 .hero { 
-    background: url(../img/hero.jpg) no-repeat center / cover; 
+    background: #1d2026;
+    /* url(../img/hero.jpg) no-repeat center / cover; */
     height: 100%;
     width: 100%;
     display: table;
@@ -814,7 +831,7 @@ nav .logo{
 
 .overlay:before {
   content: '';
-  background-color: rgba(0, 0, 0, 0.75);
+  /*background-color: rgba(0, 0, 0, 0.75);*/
   height: 100%;
   width: 100%;
   position: absolute;
@@ -841,14 +858,14 @@ nav .logo{
     position: relative;
     margin: 0;
     color: #ffffff;
-    font-family: 'minecraftchmc';
+    font-family: 'default';
 }
 .hero-text p {
     position: relative;
     margin: 45px 0 30px;
     font-size: 20px;
     color: #ffffff;
-    font-family: 'minecraftchmc';
+    font-family: 'default-small';
 }
 
 .hero-text .btn {
