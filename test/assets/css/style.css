@@ -56,7 +56,7 @@
     font-family: 'default-small';
     src:
          url(../fonts/Panton-LightCaps.otf) format('truetype'),
-         url(../fonts/Panton-LightCaps.svg.otf) format('otf');
+         url(../fonts/Panton-LightCaps.otf) format('otf');
     font-weight: normal;
     font-style: normal;
 }
@@ -103,13 +103,14 @@ p + p {
 
 /* Buttons */
 .btn {
+    font-family: 'Montserrat', sans-serif;
     line-height: 50px;
     min-width: 200px;
     font-size: 16px;
     font-weight: 300;
     border: 0;
     border-radius: 50px;
-    color: #26272d;
+    color: #ffffff;
     background-color: #fff;
     padding: 0;
     transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
@@ -120,7 +121,7 @@ p + p {
 }
 
 .btn-border {
-    border: 1px solid #26272d;
+    border: 1px solid red;
 }
 
 .btn-fill {
@@ -673,16 +674,8 @@ html, body {
     width: 100%;
     z-index: 3;
     flex: 1;
-    justify-content: left;    
-    padding: 0.74vw 1.9vw;
-    margin-right: 6.5vw;
-    margin-left: 6.5vw;
-    border-radius: 7px;
-    width: 87%;
+    justify-content: center;    
     height: 10%;
-}
-ul .site-header {
-    
 }
 
 /* Site-logo */
@@ -858,14 +851,16 @@ nav .logo{
     position: relative;
     margin: 0;
     color: #ffffff;
-    font-family: 'default';
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
 }
 .hero-text p {
     position: relative;
     margin: 45px 0 30px;
     font-size: 20px;
     color: #ffffff;
-    font-family: 'default-small';
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
 }
 
 .hero-text .btn {
