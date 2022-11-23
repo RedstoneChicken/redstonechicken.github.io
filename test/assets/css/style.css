@@ -667,15 +667,13 @@ html, body {
 /* HEADER
 ================================================== */
 .site-header {
-    display: flex;
-    align-items: center;
     position: absolute;
-    background-color: #121418;
+    padding: 20px 0 20px;
     width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     z-index: 3;
-    flex: 1;
-    justify-content: center;    
-    height: 10%;
+    background-color: #121418;
 }
 
 /* Site-logo */
@@ -1110,7 +1108,8 @@ nav .logo{
 }
 
 .newsletter-group .form-control {
-    padding-right: 125px;
+    left: 50%;
+    right: 50%;
 }
 
 .newsletter-group .btn {
