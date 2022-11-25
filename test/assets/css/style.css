@@ -35,6 +35,9 @@
 
 /* CUSTOM RESETS
 ================================================== */
+.body {
+    background-color: #303030;
+}
 @font-face {
     font-family: 'minecraftchmc';
     src: url(../fonts/minecraftchmc-dblx-webfont.eot);
@@ -72,7 +75,7 @@ a {
 
 a:focus,
 a:hover {
-    color: red;
+    color: #FF0266;
     outline: 0 none;
     text-decoration: none;
 }
@@ -121,7 +124,7 @@ p + p {
 }
 
 .btn-border {
-    border: 1px solid red;
+    border: 1px solid #E92C2C;
 }
 
 .btn-fill {
@@ -135,7 +138,7 @@ p + p {
 }
 
 .btn-green {
-    background-color: red;
+    background-color: ##E92C2C;
     color: #fff;  
 }
 
@@ -149,7 +152,7 @@ button.btn:focus {
 
 .btn-gray:hover,
 .btn-gray:focus {
-    background-color: red;
+    background-color: #E92C2C;
     color: #fff;    
 }
 
@@ -258,7 +261,7 @@ input[type=radio] {
     width: 20px;
     border-radius: 3px;
     color: #fff;
-    background-color: red;
+    background-color: #E92C2C;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -295,12 +298,12 @@ input[type=radio] {
 
 .checkbox [type="checkbox"]:checked:focus + label:before,
 .checkbox [type="checkbox"]:not(:checked):focus + label:before {
-    border: 1px dotted red;
+    border: 1px dotted #E92C2C;
 }
 
 .checkbox [type="checkbox"]:not(:checked) + label:hover:before,
 .checkbox [type="checkbox"]:checked + label:hover:before {
-    border: 1px solid red;
+    border: 1px solid #E92C2C;
 }
 
 /* Radiobutton fields */
@@ -348,7 +351,7 @@ input[type=radio] {
     height: 12px;
     top: 50%;
     left: 4px;
-    background-color: red;
+    background-color: #E92C2C;
     border-radius: 50px;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -386,12 +389,12 @@ input[type=radio] {
 
 .radio-btn [type="radio"]:checked:focus + label:before,
 .radio-btn [type="radio"]:not(:checked):focus + label:before {
-    border: 1px dotted red;
+    border: 1px dotted #E92C2C;
 }
 
 .radio-btn [type="radio"]:checked + label:hover:before,
 .radio-btn [type="radio"]:not(:checked) + label:hover:before {
-    border: 1px solid red;
+    border: 1px solid #E92C2C;
 }
 
 /* Selectpicker */
@@ -463,7 +466,7 @@ select {
 }
 
 .bootstrap-select .selected {
-    color: red;
+    color: #E92C2C;
 }
 
 .bootstrap-select .check-mark {
@@ -485,8 +488,8 @@ select {
 
 .nav-tabs.tab-style > li.active > a,
 .nav-tabs.tab-style > li > a:hover {
-    border: 1px solid red;
-    background-color: red;
+    border: 1px solid #E92C2C;
+    background-color: #E92C2C;
     color: #fff;
 }
 
@@ -561,7 +564,7 @@ select {
 .accordion .panel-heading a.collapsed:hover,
 .accordion.accordion-gray .panel-heading a.collapsed:hover,
 .accordion .panel-heading a {
-    background-color: red;   
+    background-color: #E92C2C;   
     color: #fff; 
 }
 
@@ -609,7 +612,7 @@ select {
 .pagination > li.active > a,
 .pagination > li > a:hover,
 .pagination > li.active > a:hover {
-  background-color: red;
+  background-color: #E92C2C;
   color: #fff;
 }
 
@@ -667,13 +670,19 @@ html, body {
 /* HEADER
 ================================================== */
 .site-header {
+    float: center;
+    height: auto;
+    padding-top: 27px;
+    padding-bottom: 25px;
+    background-size: 100%;
+    padding-bottom: 201px;
     position: absolute;
     padding: 20px 0 20px;
     width: 100%;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    /*border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;*/
     z-index: 3;
-    background-color: #121418;
+    background-color: #212121;
 }
 
 /* Site-logo */
@@ -689,7 +698,7 @@ nav .logo{
 }
 
 .site-title:hover {
-    color: red;   
+    color: #E92C2C;   
 }
 
 .site-title span {
@@ -697,7 +706,7 @@ nav .logo{
 }
 
 .site-title a:hover {
-    color: red;
+    color: #E92C2C;
 }
 
 /* Navigation */
@@ -743,17 +752,17 @@ nav .logo{
 .site-header-white .dropdown.open > a,
 .dropdown-menu a:hover, 
 .dropdown:hover > a, 
-.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:focus
 .dropdown-menu li a:hover,
 .slicknav_nav > li.active a,
 .slicknav_open .slicknav_arrow,
 .slicknav_nav > li a:hover {
     background-color: transparent;
-    color: red;
+    color: #E92C2C;
 }
 
 .navbar-toggle {
-    border-color: #fff;
+    border-color: rgb(0, 0, 0);
     margin: 0 15px 0 0;
     position: relative;
     top: -1px;
@@ -781,8 +790,9 @@ nav .logo{
     visibility: hidden;
     border-radius: 0;
     min-width: 130px;
+    background-color: #424242;
     border: 0;
-    border-top: 5px solid red;
+    border-top: 5px solid #E92C2C;
     top: 140%;
     transition: all 0.4s;
     -moz-transition: all 0.4s;
@@ -803,6 +813,7 @@ nav .logo{
     padding: 5px 15px;
     position: relative;
     left: 0;
+    color: white;
 }
 
 .dropdown-menu li a:hover {
@@ -812,7 +823,7 @@ nav .logo{
 /* HERO
 ================================================== */
 .hero { 
-    background: #1d2026;
+    background: #303030;
     /* url(../img/hero.jpg) no-repeat center / cover; */
     height: 100%;
     width: 100%;
@@ -820,21 +831,34 @@ nav .logo{
     position: relative;
 }
 
-.overlay:before {
-  content: '';
-  /*background-color: rgba(0, 0, 0, 0.75);*/
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
 .hero-content {
     display: table-cell;
     vertical-align: middle;
     padding-top: 75px;
+}
+
+.hero-img {
+    width: 100%;
+
+}
+.custom-shape-divider-top-1669351381 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1669351381 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-top-1669351381 .shape-fill {
+    fill: #343434;
 }
 
 .hero-text {
@@ -867,7 +891,7 @@ nav .logo{
 }
 
 .hero-text .btn:hover {
-    background-color: #26272d;
+    background-color: #303030;
     color: #fff;
 }
 
@@ -908,7 +932,7 @@ nav .logo{
 }
 
 .subpage-hero a:hover {
-    color: red;
+    color: #E92C2C;
 }
 
 .portfolio-hero {
@@ -1088,7 +1112,7 @@ nav .logo{
 }
 
 .portfolio-item a:hover {
-    background-color: #26272d;
+    background-color: #303030;
     color: #fff;
 }
 
@@ -1119,7 +1143,8 @@ nav .logo{
 /* FOOTER
 ================================================== */
 .site-footer {
-    background-color: #f5f5f8;
+    background-color: #121212;
+    color: #fff;
     padding-top: 95px;
 }
 
@@ -1178,7 +1203,7 @@ nav .logo{
 
 .list-unstyled li a:hover,
 .list-unstyled li.active a {
-    color: red;
+    color: #E92C2C;
 }
 
 /* Copyright */
@@ -1284,7 +1309,7 @@ a.linkedin-bg:hover {
 }
 
 .portfolio-sorting li .active {
-    background-color: red;
+    background-color: #E92C2C;
     color: #fff;  
     box-shadow: none;   
 }
@@ -1414,12 +1439,12 @@ a.linkedin-bg:hover {
 }
 
 .post-content .read-more:hover:after {
-    background-color: red; 
+    background-color: #E92C2C; 
 }
 
 .blog-post a:hover + .post-content .post-title a,
 .post-content a:hover {
-    color: red;
+    color: #E92C2C;
 }
 
 .post-meta {
