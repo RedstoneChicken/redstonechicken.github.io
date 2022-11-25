@@ -96,8 +96,12 @@ h2 {
     font-size: 42px;
 }
 
-h1,h2,h3,h4,h5 {
-    color: #26292c;
+h4 {
+    color: black;
+}
+
+h1,h2,h3,h5 {
+    color: #ffffff;
 }
 
 p + p {
