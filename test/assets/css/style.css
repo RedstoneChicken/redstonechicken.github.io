@@ -102,7 +102,7 @@ h4 {
 
 h1,h2,h3,h5 {
     color: #ffffff;
-}
+}   
 
 p + p {
     margin-top: 40px;
@@ -142,7 +142,7 @@ p + p {
 }
 
 .btn-green {
-    background-color: ##E92C2C;
+    background-color: #E92C2C;
     color: #fff;  
 }
 
@@ -663,7 +663,7 @@ html, body {
 
 /* Background colors */
 .gray-bg {
-  background-color: #f5f5f8;
+  background-color: #303030;
 }
 
 /* Margin and padding resets */
@@ -675,12 +675,13 @@ html, body {
 ================================================== */
 .site-header {
     float: center;
-    height: auto;
+    height: 5vw;
     padding-top: 27px;
     padding-bottom: 25px;
     background-size: 100%;
     padding-bottom: 201px;
     height: 10%;
+    vertical-align: center;
     position: absolute;
     padding: 20px 0 20px;
     width: 100%;
@@ -846,26 +847,26 @@ nav .logo{
     width: 100%;
 
 }
-.custom-shape-divider-top-1669351381 {
+.custom-shape-divider-top-1669694436 {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     overflow: hidden;
     line-height: 0;
-}
-
-.custom-shape-divider-top-1669351381 svg {
-    position: relative;
-    display: block;
+       display: block;
     width: calc(100% + 1.3px);
     height: 150px;
 }
-
-.custom-shape-divider-top-1669351381 .shape-fill {
-    fill: #343434;
+.custom-shape-divider-top-1669694436 .shape-fill {
+    fill: #303030;
 }
-
+.custom-shape-divider-top-16696944362 {
+    position: absolute;
+    overflow: hidden;
+    line-height: 0;
+       display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+    fill: #fff;
+}
 .hero-text {
     max-width: 890px;
     width: 100%;
@@ -1264,6 +1265,7 @@ a.pinterest:hover{
 a.linkedin-bg {
   color: #007bb5;
   border-color: #007bb5;
+
 }
 
 a.linkedin-bg:hover {
