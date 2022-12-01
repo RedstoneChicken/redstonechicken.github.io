@@ -128,7 +128,7 @@
 	}
 
 	.site-footer > .container {
-	    padding-bottom: 120px;
+	    padding-bottom: 0px;
 	}
 
 	.site-footer h3,
@@ -304,7 +304,7 @@
 	}
 
 	.slicknav_nav {
-		background-color: #f5f5f8;
+		background-color: #404040;
 		padding-left: 0;
 		list-style: none;
 		position: fixed;
