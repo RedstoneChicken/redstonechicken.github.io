@@ -252,7 +252,7 @@
 		height: 2px;
 		width: 22px;
 		display: block;
-		background-color: #26272d;
+		background-color: rgb(254, 254, 254);
 		-webkit-transition: all 0.3s;
 		-moz-transition: all 0.3s;
 		-ms-transition: all 0.3s;
@@ -265,7 +265,7 @@
 	}
 
 	.site-header-white .slicknav_icon-bar {
-		background-color: #fff;
+		background-color: rgb(254, 254, 254);
 	}
 
 	.site-header-white  .act .slicknav_icon-bar {
@@ -350,7 +350,7 @@
 
 	.slicknav_nav > li a {
 		display: inline-block;
-		color: #26272d;
+		color: rgb(254, 254, 254);
 		font-size: 14px;
 	}
 

@@ -36,19 +36,19 @@
 ================================================== */
 :root {
     --CompRed: rgb(255, 66, 66);
-    --CompOrange: rgb(222, 144, 64);
     --CompBlue: rgb(114, 114, 255);
     --CompMiddle: rgb(255, 125, 222);
   
-    --IndexColor: var(--CompOrange);
+    --IndexColor: var(--CompRed);
     --VersionFourColor: var(--CompRed);
     --ReimaginedColor: var(--CompBlue);
   
     --ThemeColor: var(--IndexColor);
   
-    --VeryDarkGray: rgb(40, 40, 42);
-    --Grey: #26272d;
+    --VeryDarkGray: #212121;;
+    --Gray: #26272d;
     --Gray2: #404040;
+    --Gray3: #303030;
     --DarkGray: rgb(68, 68, 72);
     --VeryLightGray: rgb(254, 254, 254);
     --LinkColor: rgb(100,200,255);
@@ -887,7 +887,7 @@
     padding: 5px 15px;
     position: relative;
     left: 0;
-    color: var(--VeryLightGray);
+    color: var(--Gray2);
   }
   
   .dropdown-menu li a:hover {
@@ -897,9 +897,11 @@
   /* HERO
   ================================================== */
   .hero { 
-    background: url(../img/end.jpg) no-repeat top / cover;
-    height: 100%;
+    background-color: var(--Gray3);
     width: 100%;
+    min-height: 100%;
+    position: relative;
+    height: 100%;
     display: table;
     position: relative;
   }
@@ -999,7 +1001,7 @@
   }
   
   .hero-text h1 {
-    font-family: 'minecraftchmc';
+    font-family: 'rubiklight';
     position: relative;
     margin: 0;
     color: var(--VeryLightGray);;
