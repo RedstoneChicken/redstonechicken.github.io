@@ -49,7 +49,7 @@
     --Gray: #26272d;
     --Gray2: #404040;
     --Gray3: #303030;
-    --DarkGray: rgb(68, 68, 72);
+    --DarkGray: #404040;
     --VeryLightGray: rgb(254, 254, 254);
     --LinkColor: rgb(100,200,255);
     --ScreenshotOverlayColor: rgba(0, 0, 0, 0);
@@ -521,7 +521,7 @@
   .nav-tabs.tab-style > li.active > a,
   .nav-tabs.tab-style > li > a:hover {
     border: 1px solid var(--ThemeColor);
-    background-color: var(--ThemeColor);
+    background-color: var(--ThemeColor);    
     color: #fff;
   }
   
@@ -887,7 +887,7 @@
     padding: 5px 15px;
     position: relative;
     left: 0;
-    color: var(--Gray2);
+    color: var(--VeryLightGray);
   }
   
   .dropdown-menu li a:hover {
@@ -1028,6 +1028,9 @@
     margin: 5px;
     background-color: transparent;
     max-width: 100%;
+    scale: 1;
+    transition: all;
+    transition-duration: 0.5s;
   }
   
   .hero-text .btn:focus {
@@ -1037,6 +1040,7 @@
     background-color: rgba(0, 0, 0, 0.25);
     color: var(--ThemeColor);
     border-color: var(--VeryLightGray);
+    scale: 1.1;
   }
   
   .hero .breadcrumb {
