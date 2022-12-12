@@ -43,7 +43,7 @@
 <!-- CONTACT -->
 ## Contact
 
-Redstone Chicken - [@redstonechicke1](https://twitter.com/redstonechicke1)
+Redstone Chicken - [@OfficialRSC](https://twitter.com/OfficialRSC)
 Redstone Chicken - [Redstone Chicken#0001] (https://dsc.gg/rscbuilds)
 
 Project Link: [https://github.com/RedstoneChicken/RedstoneChicken.github.io]
