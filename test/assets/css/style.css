@@ -74,24 +74,30 @@
   }
   
   @font-face {
-    font-family: 'rubiklight_italic';
-    src: url(../fonts/rubik/rubik-italic-variablefont_wght-webfont.eot);
-    src: url(../fonts/rubik/rubik-italic-variablefont_wght-webfont.eot?#iefix) format('embedded-opentype'),
-         url(../fonts/rubik/rubik-italic-variablefont_wght-webfont.ttf) format('truetype'),
-         url(../fonts/rubik/rubik-italic-variablefont_wght-webfont.svg#rubiklight_italic) format('svg');
+    font-family: 'Black';
+    src: url(../fonts/roboto/Roboto-Black.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
   }
   @font-face {
-    font-family: 'rubiklight';
-    src: url(../fonts/rubik/rubik-variablefont_wght-webfont.eot);
-    src: url(../fonts/rubik/rubik-variablefont_wght-webfont.eot?#iefix) format('embedded-opentype'),
-         url(../fonts/rubik/rubik-variablefont_wght-webfont.ttf) format('truetype'),
-         url(../fonts/rubik/rubik-variablefont_wght-webfont.svg#rubiklight) format('svg');
+    font-family: 'Bold';
+    src: url(../fonts/roboto/Roboto-Bold.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
   }
-  
+  @font-face {
+    font-family: 'Medium';
+    src: url(../fonts/roboto/Roboto-Medium.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Regular';
+    src: url(../fonts/roboto/Roboto-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+   
   
   /* CUSTOM RESETS
   ================================================== */
@@ -283,7 +289,7 @@
   .checkbox [type="checkbox"]:not(:checked) + label:after,
   .checkbox [type="checkbox"]:checked + label:after {
     content: '\f00c';
-    font-family: 'FontAwesome';
+    font-family: 'Regular';
     position: absolute;
     top: 50%;
     left: 0;
@@ -652,7 +658,7 @@
   }
   
   .accordion .panel-heading a::after {
-    font-family: "FontAwesome";
+    font-family: "Regular";
     content: "\f106";
     position: absolute;
     top: 50%;
@@ -723,8 +729,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'rubiklight', sans-serif;
-    /*font-family: 'minecraftchmc';*/
+    font-family: 'Regular';
     background-color: var(--VeryDarkGray);
     color: var(--VeryLightGray);
     
@@ -1001,7 +1006,7 @@
   }
   
   .hero-text h1 {
-    font-family: 'rubiklight';
+    font-family: 'Bold';
     position: relative;
     margin: 0;
     color: var(--VeryLightGray);;
@@ -1488,7 +1493,7 @@
   }
   
   .copyright p + p {
-    font-family: 'rubiklight', sans-serif;
+    font-family: 'Medium';
     font-size: 10px;
     margin-top: -20px;
     margin-right: 0px;
