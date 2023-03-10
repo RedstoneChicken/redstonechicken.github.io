@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-us">
+ 
+<head>
+<meta charset="utf-8">
+<title>Filtering Example</title>
+<style>
+body {
+    padding: 25px;
+}
+h1 {
+    font-family: "Franklin Gothic Medium", sans-serif;
+    color: #666;
+    font-weight: normal;
+    font-size: 56px;
+    margin: 15px;
+}
+ul {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13pt;
+    line-height: 30px;
+    padding: 0px;
+}
+.filterSection li {
+    list-style: none;
+    margin: 0px;
+    padding: 5px;
+    display: inline;
+     
+}
+.filterSection {
+    margin: 0px;
+    padding: 0px;
+    background-color: #EEEEEE;
+}
+#itemsToFilter li {
+    list-style: none;
+    background-position: 0 3px;
+    background-repeat: no-repeat;
+    margin: 15px;
+    padding-left: 40px;
+    font-size: 15pt;
+    color: #666;
+}
+.showItem {
+    display: list-item;
+}
+.hideItem {
+    display: none;
+}
+
+.search{
+  width: 80vw;
+  height: 100vh;
+  margin: 20px 0;
+}
+#itemsToFilter li[data-type=food] {
+    background-image: url("//www.kirupa.com/mini_icons/entypo/small_leaf.png");
+}
+  
+#itemsToFilter li[data-type=place] {
+    background-image: url("//www.kirupa.com/mini_icons/entypo/small_plane.png");
+}
+ 
+#itemsToFilter li[data-type=musician] {
+    background-image: url("//www.kirupa.com/mini_icons/entypo/small_megaphone.png");
+}
+</style>
+</head>
+ 
+<body>
+
+<h1>Filtering Example</h1>
+<div class="search">
+    <input type="text" id="searchInput"placeholder="Name...">
+<ul class="filterSection">
+    <li>
+        <strong>Show:</strong>
+        <input checked="true" type="checkbox" value="pack"/>
+        <label>Texture Packs</label>
+    </li>
+    <li>
+        <input checked="true" type="checkbox" value="place"/>
+        <label>Place</label>
+    </li>
+    <li>
+        <input checked="true" type="checkbox" value="musician"/>
+        <label>Musician</label>
+    </li>
+</ul>
+ 
+<ul id="itemsToFilter">
+    <li data-type="pack">Pasta</li>
+    <li data-type="place">Michigan</li>
+    <li data-type="pack">Celery</li>
+    <li data-type="place">Westeros</li>
+    <li data-type="musician">Bon Jovi</li>
+    <li data-type="musician">Taylor Swift</li>
+    <li data-type="place">Portland</li>
+    <li data-type="pack">Waffles</li>
+    <li data-type="musician">Bono</li>
+    <li data-type="pack">Fried Chicken</li>
+    <li data-type="place">New Zealand</li>
+    <li data-type="musician">Bruce Springsteen</li>
+    <li data-type="pack">Bananas</li>
+    <li data-type="musician">Beach Boys</li>
+    <li data-type="place">Idaho</li>
+    <li data-type="musician">Justin Bieber</li>
+</ul>
+</div>
+ 
+<script>
+ // get all of our list items
+var itemsToFilter = document.querySelectorAll("#itemsToFilter li");
+  
+//setup click event handlers on our checkboxes
+var checkBoxes = document.querySelectorAll(".filterSection li input");
+  
+for (var i = 0; i < checkBoxes.length; i++) {
+    checkBoxes[i].addEventListener("click", filterItems, false);
+    checkBoxes[i].checked = true;
+}
+  
+// the event handler!
+function filterItems(e) {
+    var clickedItem = e.target;
+      
+    if (clickedItem.checked == true) {
+        hideOrShowItems(clickedItem.value, "hideItem", "showItem");
+    } else if (clickedItem.checked == false) {
+        hideOrShowItems(clickedItem.value, "showItem", "hideItem");
+    } else {
+        // deal with the indeterminate state if needed
+    }
+}
+  
+// add or remove classes to show or hide our content
+function hideOrShowItems(itemType, classToRemove, classToAdd) {
+    for (var i = 0; i < itemsToFilter.length; i++) {
+        var currentItem = itemsToFilter[i];
+          
+        if (currentItem.getAttribute("data-type") == itemType) {
+            removeClass(currentItem, classToRemove);
+            addClass(currentItem, classToAdd);
+        }
+    }
+}
+  
+//
+// Helper functions for adding and removing class values
+//
+function addClass(element, classToAdd) {
+    var currentClassValue = element.className;
+        
+    if (currentClassValue.indexOf(classToAdd) == -1) {
+        if ((currentClassValue == null) || (currentClassValue === "")) {
+            element.className = classToAdd;
+        } else {
+            element.className += " " + classToAdd;
+        }
+    }
+}
+        
+function removeClass(element, classToRemove) {
+    var currentClassValue = element.className;
+  
+    if (currentClassValue == classToRemove) {
+        element.className = "";
+        return;
+    }
+  
+    var classValues = currentClassValue.split(" ");
+    var filteredList = [];
+  
+    for (var i = 0 ; i < classValues.length; i++) {
+        if (classToRemove != classValues[i]) {
+            filteredList.push(classValues[i]);
+        }
+    }
+  
+    element.className = filteredList.join(" ");
+}
+
+function filter() {
+  let value = document.getElementById("searchInput").value.toUpperCase();
+  let names = document.getElementById("names");
+  let rows = names.getElementsByDivName("");
+
+  for (i = 0; i < rows.length; i++) {
+    let column = rows[i].getElementsByTagName("td")[0];
+    let language = column.textContent;
+
+    rows[i].style.display =
+      language.toUpperCase().indexOf(value) > -1 ? "" : "none";
+  }
+}
+
+document.getElementById("searchInput").addEventListener("keyup", filter);
+
+</script>
+ 
+</body>
+ 
+</html>
