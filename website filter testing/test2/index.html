@@ -1,129 +1,634 @@
-<!DOCTYPE html>
-<html lang="en-us">
- 
 <head>
-<meta charset="utf-8">
-<title>Filtering Example</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<section class="author-archive">
+  <div class="container">
+    <h1>Some of my <a href="https://tutsplus.com/authors/george-martsoukos" target="_blank">Tuts+ Tutorials</a></h1>
+    <input type="radio" id="All" name="categories" value="All" checked>
+    <input type="radio" id="CSS" name="categories" value="CSS">
+    <input type="radio" id="JavaScript" name="categories" value="JavaScript">
+    <input type="radio" id="jQuery" name="categories" value="jQuery">
+    <input type="radio" id="WordPress" name="categories" value="WordPress">
+    <input type="radio" id="Slider" name="categories" value="Slider">
+    <input type="radio" id="fullPage.js" name="categories" value="fullPage.js">
+
+    <ol class="filters">
+      <li>
+        <label for="All">All</label>
+      </li>
+      <li>
+        <label for="CSS">CSS</label>
+      </li>
+      <li>
+        <label for="JavaScript">JavaScript</label>
+      </li>
+      <li>
+        <label for="jQuery">jQuery</label>
+      </li>
+      <li>
+        <label for="WordPress">WordPress</label>
+      </li>
+      <li>
+        <label for="Slider">Slider</label>
+      </li>
+      <li>
+        <label for="fullPage.js">fullPage.js</label>
+      </li>
+    </ol>
+    <ol class="posts">
+      <li class="post" data-category="CSS JavaScript">
+        <article>
+          <figure>
+            <a href="https://webdesign.tutsplus.com/tutorials/quick-tip-how-to-build-a-dead-simple-parallax-effect-with-css-javascript--cms-33061?_ga=2.146015156.1249101154.1555312171-2126893531.1553152868" target="_blank">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/parallax-pre.jpg" alt="">
+            </a>
+            <figcaption>
+              <ol class="post-categories">
+                <li>
+                  <a href="">CSS</a>
+                </li>
+                <li>
+                  <a href="">JavaScript</a>
+                </li>
+              </ol>
+              <h2 class="post-title">
+                <a href="https://webdesign.tutsplus.com/tutorials/quick-tip-how-to-build-a-dead-simple-parallax-effect-with-css-javascript--cms-33061?_ga=2.146015156.1249101154.1555312171-2126893531.1553152868" target="_blank">Quick Tip: Create a Very Simple Parallax Effect With CSS & JavaScript
+                </a>
+              </h2>
+            </figcaption>
+          </figure>
+        </article>
+      </li>
+      <li class="post" data-category="CSS JavaScript">
+        <article>
+          <figure>
+            <a href="https://webdesign.tutsplus.com/tutorials/how-to-build-a-portfolio-page-with-css-javascript--cms-32933?_ga=2.268974834.267848227.1555345574-242901505.1471790948" target="_blank">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/chart-pre.png" alt="">
+            </a>
+            <figcaption>
+              <ol class="post-categories">
+                <li>
+                  <a href="">CSS</a>
+                </li>
+                <li>
+                  <a href="">JavaScript</a>
+                </li>
+              </ol>
+              <h2 class="post-title">
+                <a href="https://webdesign.tutsplus.com/tutorials/how-to-build-a-portfolio-page-with-css-javascript--cms-32933?_ga=2.268974834.267848227.1555345574-242901505.1471790948" target="_blank">How to Build a Static Portfolio Page With CSS & JavaScript
+                </a>
+              </h2>
+            </figcaption>
+          </figure>
+        </article>
+      </li>
+      <li class="post" data-category="JavaScript WordPress">
+        <article>
+          <figure>
+            <a href="https://webdesign.tutsplus.com/tutorials/dropdown-navigation-how-to-maintain-the-selected-option-on-page-load-on-a-wordpress-site--cms-32211?_ga=2.3551667.267848227.1555345574-242901505.1471790948" target="_blank">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/pre-wp.png" alt="">
+            </a>
+            <figcaption>
+              <ol class="post-categories">
+                <li>
+                  <a href="">JavaScript</a>
+                </li>
+                <li>
+                  <a href="">WordPress</a>
+                </li>
+              </ol>
+              <h2 class="post-title">
+                <a href="https://webdesign.tutsplus.com/tutorials/dropdown-navigation-how-to-maintain-the-selected-option-on-page-load-on-a-wordpress-site--cms-32211?_ga=2.3551667.267848227.1555345574-242901505.1471790948" target="_blank">Dropdown Navigation: How to Maintain the Selected Option On WordPress
+                </a>
+              </h2>
+            </figcaption>
+          </figure>
+        </article>
+      </li>
+      <li class="post" data-category="CSS JavaScript">
+        <article>
+          <figure>
+            <a href="https://webdesign.tutsplus.com/tutorials/dropdown-navigation-how-to-maintain-the-selected-option-on-page-load--cms-32210?_ga=2.192885033.267848227.1555345574-242901505.1471790948" target="_blank">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/load-pre.png" alt="">
+            </a>
+            <figcaption>
+              <ol class="post-categories">
+                <li>
+                  <a href="">CSS</a>
+                </li>
+                <li>
+                  <a href="">JavaScript</a>
+                </li>
+              </ol>
+              <h2 class="post-title">
+                <a href="https://webdesign.tutsplus.com/tutorials/dropdown-navigation-how-to-maintain-the-selected-option-on-page-load--cms-32210?_ga=2.192885033.267848227.1555345574-242901505.1471790948" target="_blank">Dropdown Navigation: How to Maintain the Selected Option on Page Load
+                </a>
+              </h2>
+            </figcaption>
+          </figure>
+        </article>
+      </li>
+      <li class="post" data-category="CSS">
+        <article>
+          <figure>
+            <a href="https://webdesign.tutsplus.com/tutorials/quick-tip-how-to-enhance-a-page-with-css-animations--cms-32100?_ga=2.3551667.267848227.1555345574-242901505.1471790948" target="_blank">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/animations-pre.png" alt="">
+            </a>
+            <figcaption>
+              <ol class="post-categories">
+                <li>
+                  <a href="">CSS</a>
+                </li>
+              </ol>
+              <h2 class="post-title">
+                <a href="https://webdesign.tutsplus.com/tutorials/quick-tip-how-to-enhance-a-page-with-css-animations--cms-32100?_ga=2.3551667.267848227.1555345574-242901505.1471790948" target="_blank">Enhance the Way a Web Page Loads With CSS Animations
+                </a>
+              </h2>
+            </figcaption>
+          </figure>
+        </article>
+      </li>
+      <li class="post" data-category="CSS">
+        <article>
+          <figure>
+            <a href="https://webdesign.tutsplus.com/tutorials/how-to-build-a-full-screen-responsive-page-with-flexbox--cms-32086?_ga=2.225771033.267848227.1555345574-242901505.1471790948" target="_blank">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/flex-pre.png" alt="">
+            </a>
+            <figcaption>
+              <ol class="post-categories">
+                <li>
+                  <a href="">CSS</a>
+                </li>
+              </ol>
+              <h2 class="post-title">
+                <a href="https://webdesign.tutsplus.com/tutorials/how-to-build-a-full-screen-responsive-page-with-flexbox--cms-32086?_ga=2.225771033.267848227.1555345574-242901505.1471790948" target="_blank">How to Build a Full-Screen Responsive Page With Flexbox</a>
+              </h2>
+            </figcaption>
+          </figure>
+        </article>
+      </li>
+      <li class="post" data-category="fullPage.js">
+        <article>
+          <figure>
+            <a href="https://webdesign.tutsplus.com/tutorials/how-to-create-an-animated-spirit-day-presentation-with-fullpagejs--cms-32005?_ga=2.171060384.1249101154.1555312171-2126893531.1553152868" target="_blank">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/spirit-pre.jpg" alt="">       
+            </a>
+            <figcaption>
+              <ol class="post-categories">
+                <li>
+                  <a href="">fullPage.js</a>
+                </li>
+              </ol>
+              <h2 class="post-title">
+                <a href="https://webdesign.tutsplus.com/tutorials/how-to-create-an-animated-spirit-day-presentation-with-fullpagejs--cms-32005?_ga=2.171060384.1249101154.1555312171-2126893531.1553152868" target="_blank">How to Create an Animated Spirit Day Presentation With fullPage.js
+                </a>
+              </h2>
+            </figcaption>
+          </figure>
+        </article>
+      </li>
+      <li class="post" data-category="CSS JavaScript">
+        <article>
+          <figure>
+            <a href="https://webdesign.tutsplus.com/tutorials/quick-tip-how-to-manipulate-cursor-appearance-with-css--cms-31825?_ga=2.149104566.1249101154.1555312171-2126893531.1553152868" target="_blank">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/cursor-pre.jpg" alt="">
+            </a>
+            <figcaption>
+              <ol class="post-categories">
+                <li>
+                  <a href="">CSS</a>
+                </li>
+                <li>
+                  <a href="">JavaScript</a>
+                </li>
+              </ol>
+              <h2 class="post-title">
+                <a href="https://webdesign.tutsplus.com/tutorials/quick-tip-how-to-manipulate-cursor-appearance-with-css--cms-31825?_ga=2.149104566.1249101154.1555312171-2126893531.1553152868" target="_blank">Quick Tip: How to Manipulate the Cursor Appearance With CSS
+                </a>
+              </h2>
+            </figcaption>
+          </figure>
+        </article>
+      </li>
+      <li class="post" data-category="jQuery CSS Slider">
+        <article>
+          <figure>
+            <a href="https://webdesign.tutsplus.com/tutorials/how-to-build-a-full-screen-responsive-carousel-slider-with-owljs--cms-31771?_ga=2.214527703.1129106392.1555690352-242901505.1471790948" target="_blank">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/pre-oo.png" alt="">
+            </a>
+            <figcaption>
+              <ol class="post-categories">
+                <li>
+                  <a href="">jQuery</a>
+                </li>
+                <li>
+                  <a href="">CSS</a>
+                </li>
+                <li>
+                  <a href="">Slider</a>
+                </li>
+              </ol>
+              <h2 class="post-title">
+                <a href="https://webdesign.tutsplus.com/tutorials/how-to-build-a-full-screen-responsive-carousel-slider-with-owljs--cms-31771?_ga=2.214527703.1129106392.1555690352-242901505.1471790948" target="_blank">How to Build a Full-Screen Responsive Carousel Slider With Owl.js
+                </a>
+              </h2>
+            </figcaption>
+          </figure>
+        </article>
+      </li>
+      <li class="post" data-category="jQuery CSS Slider">
+        <article>
+          <figure>
+            <a href="https://webdesign.tutsplus.com/tutorials/how-to-build-an-attractive-responsive-image-gallery-with-slickjs--cms-31355?_ga=2.245039813.1129106392.1555690352-242901505.1471790948" target="_blank">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/slick-pre.png" alt="">
+            </a>
+            <figcaption>
+              <ol class="post-categories">
+                <li>
+                  <a href="">jQuery</a>
+                </li>
+                <li>
+                  <a href="">CSS</a>
+                </li>
+                <li>
+                  <a href="">Slider</a>
+                </li>
+              </ol>
+              <h2 class="post-title">
+                <a href="https://webdesign.tutsplus.com/tutorials/how-to-build-an-attractive-responsive-image-gallery-with-slickjs--cms-31355?_ga=2.245039813.1129106392.1555690352-242901505.1471790948" target="_blank">How to Build an Attractive Responsive Image Gallery With slick.js
+                </a>
+              </h2>
+            </figcaption>
+          </figure>
+        </article>
+      </li>
+      <li class="post" data-category="CSS JavaScript">
+        <article>
+          <figure>
+            <a href="https://webdesign.tutsplus.com/tutorials/a-simple-javascript-technique-for-filling-star-ratings--cms-29450?_ga=2.239800003.1129106392.1555690352-242901505.1471790948" target="_blank">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/stars-pre.png" alt="">
+            </a>
+            <figcaption>
+              <ol class="post-categories">
+                <li>
+                  <a href="">CSS</a>
+                </li>
+                <li>
+                  <a href="">JavaScript</a>
+                </li>
+              </ol>
+              <h2 class="post-title">
+                <a href="https://webdesign.tutsplus.com/tutorials/a-simple-javascript-technique-for-filling-star-ratings--cms-29450?_ga=2.239800003.1129106392.1555690352-242901505.1471790948" target="_blank">A Simple JavaScript Technique for Filling Star Ratings
+                </a>
+              </h2>
+            </figcaption>
+          </figure>
+        </article>
+      </li>
+      <li class="post" data-category="jQuery fullPage.js">
+        <article>
+          <figure>
+            <a href="https://webdesign.tutsplus.com/tutorials/quick-tip-scroll-animations-with-fullpagejs-and-animatecss--cms-25235?_ga=2.245041733.1129106392.1555690352-242901505.1471790948" target="_blank">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/scroll-preview.jpg" alt="">
+            </a>
+            <figcaption>
+              <ol class="post-categories">
+                <li>
+                  <a href="">jQuery</a>
+                </li>
+                <li>
+                  <a href="">fullPage.js</a>
+                </li>
+              </ol>
+              <h2 class="post-title">
+                <a href="https://webdesign.tutsplus.com/tutorials/quick-tip-scroll-animations-with-fullpagejs-and-animatecss--cms-25235?_ga=2.245041733.1129106392.1555690352-242901505.1471790948" target="_blank">Quick Tip: Scroll Animations With fullPage.js and Animate.css
+                </a>
+              </h2>
+            </figcaption>
+          </figure>
+        </article>
+      </li>
+    </ol>
+  </div>
+</section>
+
+
+<footer>
+        
+<div class="row copyright">
+  <div class="footer-menu">
+
+  <a href="">Home</a>
+  <a href="">F.A.Q</a>
+  <a href="">Cookies Policy</a>
+  <a href="">Terms Of Service</a>
+  <a href="">Support</a>
+
+  </div><div class="social">
+            <i class="fa fa-facebook-square"></i>
+            <i class="fa fa-twitter-square"></i>
+            <i class="fa fa-linkedin-square"></i>
+            <i class="fa fa-instagram"></i>
+        </div>
+   <p>Copyright &copy; 2022</p>
+</div>
+
+</footer>
 <style>
+/* RESET RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --background: #36393e;
+  --black: #3a3a3a;
+  --white: #fff;
+  --green: #49b293;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  margin: 0px 0;
+  color: var(--background);
+  font: 1rem/1.3 sans-serif;
+  align-items: flex-end;
+}
+
+.author-archive {
+  padding: 1.5rem;
+  color: var(--black);
+}
+
 .container {
-  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.filterDiv {
-  float: left;
-  background-color: #2196F3;
-  color: #ffffff;
-  width: 100px;
-  line-height: 100px;
+h1 {
   text-align: center;
-  margin: 2px;
-  display: none; /* Hidden by default */
+  margin-bottom: 2rem;
 }
 
-/* The "show" class is added to the filtered elements */
-.show {
+h1 a {
+  transition: all 0.1s;
+}
+
+h1 a:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+
+/* FILTERS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.filters {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.filters * {
+  display: inline-block;
+}
+
+.filters label {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.25rem;
+  border-radius: 2rem;
+  min-width: 50px;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.filters label:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+
+/* FILTERED ELEMENTS (POSTS)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.posts {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.posts .post {
+  background: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.posts .post-title {
+  font-size: 1.3rem;
+}
+
+.posts .post-title:hover {
+  text-decoration: underline;
+}
+
+.posts figcaption {
+  padding: 1rem;
+}
+
+.posts .post-categories {
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+}
+
+.posts .post-categories * {
+  display: inline-block;
+}
+
+.posts .post-categories li {
+  margin-bottom: 0.2rem;
+}
+
+.posts .post-categories a {
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid;
+  line-height: normal;
+  transition: all 0.1s;
+}
+
+.posts .post-categories a:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+
+/* FILTERING RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+[value="All"]:checked ~ .filters [for="All"],
+[value="CSS"]:checked ~ .filters [for="CSS"],
+[value="JavaScript"]:checked ~ .filters [for="JavaScript"],
+[value="jQuery"]:checked ~ .filters [for="jQuery"],
+[value="WordPress"]:checked ~ .filters [for="WordPress"],
+[value="Slider"]:checked ~ .filters [for="Slider"],
+[value="fullPage.js"]:checked ~ .filters [for="fullPage.js"] {
+  background: var(--green);
+  color: var(--white);
+}
+
+[value="All"]:checked ~ .posts [data-category] {
   display: block;
 }
 
-/* Style the buttons */
-.btn {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: #f1f1f1;
-  cursor: pointer;
+[value="CSS"]:checked ~ .posts .post:not([data-category~="CSS"]),
+[value="JavaScript"]:checked ~ .posts .post:not([data-category~="JavaScript"]),
+[value="jQuery"]:checked ~ .posts .post:not([data-category~="jQuery"]),
+[value="WordPress"]:checked ~ .posts .post:not([data-category~="WordPress"]),
+[value="Slider"]:checked ~ .posts .post:not([data-category~="Slider"]),
+[value="fullPage.js"]:checked ~ .posts .post:not([data-category~="fullPage.js"]) {
+  display: none;
 }
 
-/* Add a light grey background on mouse-over */
-.btn:hover {
-  background-color: #ddd;
+
+/* FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+footer {
+	background: var(--black);
+    width: fit-content
 }
 
-/* Add a dark background to the active button */
-.btn.active {
-  background-color: #666;
+.row {
+  padding: 1em 1em;
+}
+.row.primary {
+  display: grid;
+  grid-template-columns: 3fr 2fr 4fr;
+  align-items: stretch;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
+  min-height: 15em;
+  width: 100%
+}
+h3 {
+  width: 100%;
+  text-align: left;
   color: white;
+  font-size: 1.4em;
+  white-space: nowrap;
 }
-</style>
-</head>
- 
-<body>
-<!-- Control buttons -->
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('cars')"> Cars</button>
-  <button class="btn" onclick="filterSelection('animals')"> Animals</button>
-  <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
-  <button class="btn" onclick="filterSelection('colors')"> Colors</button>
-</div>
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+li:not(:first-child) {
+  margin-top: 0.8em;
+}
+ul li a {
+  color: #a7a7a7;
+  text-decoration: none;
+}
+ul li a:hover {
+  color: #c7940a;
+}
+.about p {
+  text-align: justify;
+  line-height: 2;
+  margin: 0;
+}
+input,
+button {
+  font-size: 1em;
+  padding: 1em;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+button {
+  background-color: #c7940a;
+  color: #ffffff;
+}
+div.social {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.4em;
+  flex-direction: row;
+  margin-top: 0.5em;
+}
+.social i {
+  color: #bac6d9;
+}
+.copyright {
+  padding: 0.3em 1em;
+  background-color: #25262e;
+}
+.footer-menu{
+  float: left;
+    margin-top: 10px;
+}
+.footer-menu a{
+  color: #cfd2d6;
+  padding: 6px;
+  text-decoration: none;
+}
+.footer-menu a:hover, .social i:hover{
+  color: #c7940a;
+}
+.copyright p {
+  font-size: 0.9em;
+  text-align: right;
+}
 
-<!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
-<div class="container">
-  <div class="filterDiv cars">BMW</div>
-  <div class="filterDiv colors fruits">Orange</div>
-  <div class="filterDiv cars">Volvo</div>
-  <div class="filterDiv colors">Red</div>
-  <div class="filterDiv cars animals">Mustang</div>
-  <div class="filterDiv colors">Blue</div>
-  <div class="filterDiv animals">Cat</div>
-  <div class="filterDiv animals">Dog</div>
-  <div class="filterDiv fruits">Melon</div>
-  <div class="filterDiv fruits animals">Kiwi</div>
-  <div class="filterDiv fruits">Banana</div>
-  <div class="filterDiv fruits">Lemon</div>
-  <div class="filterDiv animals">Cow</div>
-</div>
- 
+@media screen and (max-width: 850px) {
+  .row.primary {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* MQ
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 900px) {
+  .posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  html {
+    font-size: 14px;
+  }
+
+  .posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+</style>	
 <script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
 
-// Show filtered elements
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
-    }
-  }
-}
-
-// Hide elements that are not selected
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current control button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
+  
 </script>
- 
-</body>
- 
-</html>
