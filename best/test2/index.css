@@ -1,0 +1,224 @@
+  /* RESET RULES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  :root {
+    --background: #272727;
+    --black: #000000;
+    --white: #fff;
+    --posts: #5a5a5a;
+    --theme: rgb(255, 66, 66);
+  }
+  
+  * {
+        transition: all 0.25s ease-in-out;
+    margin: 0;
+    padding: 0;
+  display: block;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  ol {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  body {
+    margin: 0px 0;
+    color: white;
+    background-color: var(--background);
+    font: 1rem/1.3 sans-serif;
+    align-items: flex-end;
+  }
+  
+  .author-archive {
+    padding: 1.5rem;
+    color: white;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  h1 a {
+    transition: all 0.1s;
+  }
+  
+  h1 a:hover {
+    background: var(--theme);
+    color: var(--white);
+  }
+  
+  input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  
+  /* FILTERS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .filters {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .filters * {
+    display: inline-block;
+  }
+  
+  .filters label {
+    background: var(--black);
+    padding: 0.5rem 1rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.25rem;
+    border-radius: 2rem;
+    min-width: 50px;
+    line-height: normal;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+  }
+  
+  .filters label:hover {
+    background: var(--theme);
+    color: var(--white);
+    scale: 1.1;
+
+  }
+  
+  
+  /* FILTERED ELEMENTS (POSTS)
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .posts {
+    display: grid;
+    grid-gap: 2.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 4rem;
+    padding-right: 4rem;
+    }
+  
+  .posts .post {
+    background: var(--posts);
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    transition: all 0.25s ease-out;
+    border-radius: 25px;
+    min-height: 23rem;
+   box-shadow: 0px 5px 10px black;
+   transition: all;
+    transition-duration: 0.5s;
+  }
+  .posts .post:hover {
+    scale: 1.1;
+    }
+  .posts img {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .posts .post-title {
+    font-size: 1.3rem;
+  }
+  
+  .posts .post-title:hover {
+    text-decoration: underline;
+  }
+  
+  .posts figcaption {
+    padding: 1rem;
+  }
+  
+  .posts .post-categories {
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .posts .post-categories * {
+    display: inline-block;
+  }
+  
+  .posts .post-categories li {
+    margin-bottom: 0.2rem;
+  }
+  
+  .posts .post-categories a {
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid;
+    line-height: normal;
+    transition: all 0.25s ease-out;
+  }
+  
+  .posts .post-categories a:hover {
+    background: var(--theme);
+    color: var(--white);
+  }
+  
+  
+  /* FILTERING RULES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  [value="All"]:checked ~ .filters [for="All"],
+  [value="Packs"]:checked ~ .filters [for="Packs"],
+  [value="Addons"]:checked ~ .filters [for="Addons"],
+  [value="Other"]:checked ~ .filters [for="Other"] {
+    background-color: var(--theme);
+    color: var(--white);
+    scale: 1.1;
+  }
+  
+  [value="All"]:checked ~ .posts [data-category] {
+    display: block;
+  }
+  
+  [value="Packs"]:checked ~ .posts .post:not([data-category~="Packs"]),
+  [value="Addons"]:checked ~ .posts .post:not([data-category~="Addons"]),
+  [value="Other"]:checked ~ .posts .post:not([data-category~="Other"]) {
+    display: none;
+  }
+    
+  @media screen and (max-width: 850px) {
+    .row.primary {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* MQ
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  @media only screen and (max-width: 850px) {
+    html {
+      font-size: 0.8rem;
+    }
+    .posts {
+      grid-template-columns: repeat(2, 1fr);
+      padding-left: 3rem;
+    padding-right: 3rem;
+    min-height: 18rem;
+    }
+  }
+  
+  @media only screen and (max-width: 550px) {
+    html {
+      font-size: 14px;
+    }
+  
+    .posts {
+      grid-template-columns: repeat(1, 1fr);
+          padding-left: 2rem;
+    padding-right: 2rem;
+    }
+  }
