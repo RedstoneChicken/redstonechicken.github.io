@@ -5,9 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redstone Chicken's Official Website</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="icon" href="rsc.png">
 </head>
+<nav>
+<ul class="menu" data-animation="center">
+  <li>
+    <a href="#0">
+      About
+    </a>
+  </li>
+  <li>
+    <a href="#0">
+      Projects
+    </a>
+  </li>
+  <li>
+    <a href="#0">
+      Clients
+    </a>
+  </li>
+  <li>
+    <a href="#0">
+      Contact
+    </a>
+  </li>
+</ul>
+  <ul class="menu">
+    <li class="logo"><a href="#">Creative Mind Agency</a></li>
+    <li class="item"><a href="#">Home</a></li>
+    <li class="item"><a href="#">About</a></li>
+    <li class="item has-submenu">
+      <a tabindex="0">Services</a>
+      <ul class="submenu">
+        <li class="subitem"><a href="#">Design</a></li>
+        <li class="subitem"><a href="#">Development</a></li>
+        <li class="subitem"><a href="#">SEO</a></li>
+        <li class="subitem"><a href="#">Copywriting</a></li>
+      </ul>
+    </li>
+    <li class="item has-submenu">
+      <a tabindex="0">Plans</a>
+      <ul class="submenu">
+        <li class="subitem"><a href="#">Freelancer</a></li>
+        <li class="subitem"><a href="#">Startup</a></li>
+        <li class="subitem"><a href="#">Enterprise</a></li>
+      </ul>
+    </li>
+    <li class="item"><a href="#">Blog</a></li>
+    <li class="item"><a href="#">Contact</a>
+    </li>
+    <li class="item button"><a href="#">Log In</a></li>
+    <li class="item button secondary"><a href="#">Sign Up</a></li>
+    <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+  </ul>
+</nav>
+
   <body><section class="author-archive">
     <div class="container">
       <h1>Some of my <a href="https://tutsplus.com/authors/george-martsoukos" target="_blank">Downloads</a></h1>
@@ -296,5 +349,59 @@
     </div>
   </section>
   </body>
-  </html>
- 
+<footer class="page-footer">
+  <small>Made with <span>❤</span> by <a href="http://georgemartsoukos.com/" target="_blank">George Martsoukos</a>
+  </small>
+</footer>
+
+<script>
+const toggle = document.querySelector(".toggle");
+const menu = document.querySelector(".menu");
+const items = document.querySelectorAll(".item");
+
+/* Toggle mobile menu */
+function toggleMenu() {
+  if (menu.classList.contains("active")) {
+    menu.classList.remove("active");
+    toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
+  } else {
+    menu.classList.add("active");
+    toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
+  }
+}
+
+/* Activate Submenu */
+function toggleItem() {
+  if (this.classList.contains("submenu-active")) {
+    this.classList.remove("submenu-active");
+  } else if (menu.querySelector(".submenu-active")) {
+    menu.querySelector(".submenu-active").classList.remove("submenu-active");
+    this.classList.add("submenu-active");
+  } else {
+    this.classList.add("submenu-active");
+  }
+}
+
+/* Close Submenu From Anywhere */
+function closeSubmenu(e) {
+  if (menu.querySelector(".submenu-active")) {
+    let isClickInside = menu
+      .querySelector(".submenu-active")
+      .contains(e.target);
+
+    if (!isClickInside && menu.querySelector(".submenu-active")) {
+      menu.querySelector(".submenu-active").classList.remove("submenu-active");
+    }
+  }
+}
+/* Event Listeners */
+toggle.addEventListener("click", toggleMenu, false);
+for (let item of items) {
+  if (item.querySelector(".submenu")) {
+    item.addEventListener("click", toggleItem, false);
+  }
+  item.addEventListener("keypress", toggleItem, false);
+}
+document.addEventListener("click", closeSubmenu, false);
+</script>
+   </html>
