@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redstone Chicken's Official Website</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="rsc.png">
 <header>
   <div class="container header-content">
-    <img alt="envato-tuts+" class="logo" src="https://static.tutsplus.com/packs/media/images/tuts_logo-ae9e557ae6c08db82f47e6047900e39b.svg">
+    <img alt="header-logo" class="logo" src="rsc.png">
   </div>
 </header>
 
 <main class="container">
-  <!--   <div class="profile__header">
+ <div class="profile__header">
     <div class="profile__title">Jemima Abu</div>
     <div class="profile__website"><a class="profile__website-link" href="https://www.jemimaabu.com/">www.jemimaabu.com/</a></div>
 
@@ -16,7 +22,7 @@
       <li class="profile__social-link__item"><a title="Github" class="profile__social-link profile__social-link--github" href="https://github.com/jemimaabu"><i class="fab profile__social-link-icon fa-github"></i></a></li>
       <li class="profile__social-link__item"><a title="Linkedin" class="profile__social-link profile__social-link--linkedin" href="https://www.linkedin.com/in/jemimaabu"><i class="fab profile__social-link-icon fa-linkedin-in"></i></a></li>
     </ul>
-  </div> -->
+  </div>
 
   <div class="container__title">Categories</div>
   <div id="post-categories" class="filter-container"></div>
@@ -31,18 +37,22 @@
 <style>
 * {
   box-sizing: border-box;
+transform-origin: center;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 body {
   font: normal 16px/26px system-ui, Roboto, Arial, sans-serif;
   background: #fefefe;
   color: #2a3744;
-  margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
   overflow-x: hidden;
+  margin: auto;
 }
 
 header {
@@ -65,6 +75,7 @@ a {
   margin: 0 auto;
   padding: 0 24px;
   width: 100%;
+  margin: auto;
 }
 
 main.container {
