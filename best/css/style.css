@@ -92,6 +92,7 @@ video {
 }
 
 .header {
+	opacity: 1!important;
   position: fixed;
   left: 0;
   top: 0;
