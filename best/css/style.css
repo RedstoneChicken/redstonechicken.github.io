@@ -101,9 +101,7 @@ video {
   border: none;
   outline: none;
   background: rgba(36, 36, 36, 0.7);
-
   border-bottom: 1px solid rgba(84, 84, 84, 0.48);
-  
   -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
           box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
@@ -324,6 +322,7 @@ video {
   opacity: 0;
   visibility: hidden;
   background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1px) saturate(50%);
   -webkit-transition: all 0.35s ease;
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
