@@ -25,8 +25,8 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #121212;
-  background: #fafafa;
+  color: #fff;
+  background: #242424;
 }
 
 body.scrolling {
@@ -69,6 +69,7 @@ video {
   height: auto;
   padding: 0 2rem;
   margin: 0 auto;
+  
 }
 
 @media only screen and (max-width: 768px) {
@@ -85,7 +86,7 @@ video {
   line-height: inherit;
   border: none;
   outline: none;
-  color: #e91e63;
+  color: #e91e2f;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
 }
@@ -99,7 +100,10 @@ video {
   z-index: 999;
   border: none;
   outline: none;
-  background: #fafafa;
+  background: rgba(36, 36, 36, 0.7);
+
+  border-bottom: 1px solid rgba(84, 84, 84, 0.48);
+  
   -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
           box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
@@ -123,6 +127,7 @@ video {
 .header .navbar {
   max-width: 100%;
   height: auto;
+
 }
 
 .header .menu > .menu-item {
@@ -140,7 +145,7 @@ video {
   padding: 1rem 0;
   border: none;
   outline: none;
-  color: #121212;
+  color: #fff;
   text-transform: capitalize;
   text-rendering: optimizeLegibility;
   -webkit-transition: all 0.35s ease;
@@ -168,7 +173,7 @@ video {
   top: 50%;
   width: 100%;
   height: 2px;
-  background: #121212;
+  background: #fff;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -178,11 +183,11 @@ video {
 }
 
 .header .menu > .menu-item:hover > a {
-  color: #e91e63;
+  color: #e91e2f;
 }
 
 .header .menu > .menu-item:hover > a .expand::before, .header .menu > .menu-item:hover > a .expand::after {
-  background: #e91e63;
+  background: #e91e2f;
 }
 
 .header .menu > .menu-item > a .expand::after {
@@ -192,7 +197,7 @@ video {
 }
 
 .header .menu > .menu-item > .sub-menu > .menu-item > a:hover {
-  color: #e91e63;
+  color: #e91e2f;
 }
 
 .header .menu > .menu-item > .sub-menu {
@@ -206,8 +211,8 @@ video {
   outline: none;
   opacity: 0;
   visibility: hidden;
-  border-top: 3px solid #e91e63;
-  background: #ffffff;
+  border-top: 3px solid #e91e2f;
+  background: #242424;
   -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
           box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   -webkit-transform: translateY(1rem);
@@ -229,7 +234,7 @@ video {
   font-weight: 600;
   line-height: inherit;
   padding: 0.5rem 1.25rem;
-  color: #121212;
+  color: #fff;
   text-transform: capitalize;
   text-rendering: optimizeLegibility;
   -webkit-transition: all 0.35s ease;
@@ -266,7 +271,7 @@ video {
   outline: none;
   opacity: 1;
   border-radius: 0.25rem;
-  background: #121212;
+  background: #fff;
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -357,7 +362,7 @@ video {
     opacity: 0;
     overflow-y: auto;
     visibility: hidden;
-    background: #ffffff;
+    background: #242424;
     -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     -webkit-transition: all 0.5s ease;
@@ -400,14 +405,14 @@ video {
   }
   .header .menu > .menu-item > a {
     padding: 0.75rem 1rem;
-    color: #121212;
-    border-bottom: 1px solid #f2f2f2;
+    color: #fff;
+    border-bottom: 1px solid rgba(84, 84, 84, 0.48);
   }
   .header .menu > .menu-item:first-child > a {
-    border-top: 1px solid #f2f2f2;
+    border-top: 1px solid rgba(84, 84, 84, 0.48);
   }
   .header .menu > .menu-item > a .expand::before, .header .menu > .menu-item > a .expand::after {
-    background: #121212;
+    background: #fff;
   }
   .header .menu > .menu-item-has-children.active > a .expand:after {
     -webkit-transform: translate(-50%, -50%) rotate(0deg);
@@ -435,8 +440,8 @@ video {
   }
   .header .menu > .menu-item > .sub-menu > .menu-item > a {
     padding: 0.75rem 2rem;
-    color: #121212;
-    border-bottom: 1px solid #f2f2f2;
+    color: #fff;
+    border-bottom: 1px solid rgba(84, 84, 84, 0.48);
   }
   .header .opened-menu {
     display: block;
