@@ -1,3 +1,7 @@
+<header>
+<meta http-equiv="refresh" content="0; URL=https://redstonechicken.github.io/best" />
+</header>
+
 <a name="readme-top"></a>
 <br />
 <div align="center">
