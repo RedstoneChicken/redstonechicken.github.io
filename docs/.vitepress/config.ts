@@ -1,42 +1,19 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from 'vitepress';
 
+// refer https://vitepress.dev/reference/site-config for details
 export default defineConfig({
   lang: 'en-US',
   title: 'RedstoneChicken.com',
   description: 'The official website for Redstone Chicken.',
-  lastUpdated: true,
-  ignoreDeadLinks: true,
-  base: '/regolith/',
-
-  head: [
-    ['link', { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }],
-    ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: title }],
-    ['meta', { property: 'og:url', content: url }],
-    ['meta', { property: 'twitter:description', content: description }],
-    ['meta', { property: 'twitter:title', content: title }],
-    ['meta', { property: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { property: 'twitter:url', content: url }]
-  ],
 
   themeConfig: {
-    logo: '/logo.png',
-
-    editLink: {
-      text: 'Suggest changes to this page.',
-      pattern:
-        'https://github.com/Bedrock-OSS/regolith/edit/main/docs/docs/:path'
+    search: {
+      provider: 'local'
     },
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/Bedrock-OSS/regolith' },
-      { icon: 'discord', link: 'https://discord.gg/XjV87YN' }
-    ],
-
     footer: {
-      message: 'Released under the MIT license.',
-      copyright: `Copyright © ${new Date().getFullYear()} Bedrock OSS.`
+      copyright: `Copyright © ${new Date().getFullYear()} Redstone Chicken.`
     },
+
 
     nav: [
       {
