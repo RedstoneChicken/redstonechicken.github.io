@@ -1,11 +1,11 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title,
-  description,
+  lang: 'en-US',
+  title: 'RedstoneChicken.com',
+  description: 'The official website for Redstone Chicken.',
   lastUpdated: true,
   ignoreDeadLinks: true,
-  cleanUrls: 'with-subfolders',
   base: '/regolith/',
 
   head: [
