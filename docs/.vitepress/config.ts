@@ -1,10 +1,4 @@
 import { defineConfig } from 'vitepress'
-import { getLatestVersion } from './utils/latestVersion'
-
-const title = 'Regolith'
-const description =
-  'A flexible and language-agnostic addon-compiler for the Bedrock Edition of Minecraft.'
-const url = 'https://bedrock-oss.github.io/regolith/'
 
 export default defineConfig({
   title,
