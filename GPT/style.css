@@ -1,0 +1,123 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set background and font styles for the body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #333;
+}
+
+/* Main container layout */
+#main-container {
+    display: flex;
+    width: 80%;
+    height: 70%;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Container for the game area */
+#game-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f7f7f7;
+    border-right: 2px solid #eee;
+    padding: 20px;
+}
+
+/* Canvas styling */
+#game-canvas {
+    border: 2px solid #333;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Container for the code area */
+#code-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    padding: 20px;
+}
+
+/* Quest description and guide styling */
+#quest {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#quest p {
+    margin-bottom: 10px;
+}
+
+#quest-description {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#quest-guide {
+    font-style: italic;
+}
+
+/* Console styling */
+#console {
+    width: 100%;
+}
+
+#code-input {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    resize: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Controls styling */
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#controls button {
+    background: #4facfe;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#controls button:hover {
+    background: #00c3ff;
+}
