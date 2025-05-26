@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../../Desktop/Cade's Folder/Apps/mcbe-switcher-plus-0.1.1/MCBESwitcher+/Profiles/New/development_resource_packs/VDXLegacyM"
+		},
+		{
+			"path": "../../../Desktop/Cade's Folder/Apps/mcbe-switcher-plus-0.1.1/MCBESwitcher+/Profiles/New/development_resource_packs/VDX-Mixed-UI-v1.2.5"
+		},
+		{
+			"path": "../../../../AppData/Local/Packages/Microsoft.MinecraftUWP_8wekyb3d8bbwe/LocalState/games/com.mojang/development_resource_packs/More Hats RP"
+		},
+		{
+			"path": "../../../../AppData/Local/Packages/Microsoft.MinecraftUWP_8wekyb3d8bbwe/LocalState/games/com.mojang/development_behavior_packs/More Hats BP"
+		}
+	],
+	"settings": {
+		"editor.fontFamily": "Fira Code"
+	}
+}
