@@ -1,0 +1,26 @@
+/* YouTube tile styles - cleaned up and simplified */
+.youtube-tile {
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Remove rectangular borders */
+.youtube-tile img,
+.youtube-tile .aspect-video {
+  border-radius: 0;
+  border: none;
+}
+
+/* Make mod tiles same height */
+.mod-tile {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mod-tile-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,127 @@
+
+/* Import the custom hover effects */
+@import url('./hover-effects.css');
+
+/* Global styles to fix the broken layout and restore functionality */
+
+/* Prevent flash of scrollbar on page load and fix double scrollbar bug */
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fix container overflow issues */
+#root {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Prevent child containers from creating their own scrollbars */
+.main-container {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+/* Fix carousel clipping issues and allow scale animations */
+.embla {
+  overflow: visible !important;
+}
+
+.embla__container {
+  backface-visibility: hidden;
+  display: flex;
+  touch-action: pan-y;
+  gap: 1rem;
+  overflow: visible;
+}
+
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 auto;
+  min-width: 0;
+  overflow: visible;
+}
+
+/* Allow hover effects to show properly */
+.allow-overflow {
+  overflow: visible !important;
+}
+
+.allow-overflow > * {
+  overflow: visible !important;
+}
+
+/* Ensure proper z-index layering */
+.red-border-hover {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.red-border-hover:hover {
+  z-index: 20;
+  overflow: hidden;
+}
+
+
+/* Enhanced background decorations that scale on mobile */
+.hero-decoration {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(60vw, 800px);
+  height: min(60vh, 600px);
+  background: radial-gradient(ellipse, hsl(var(--primary) / 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+  animation: gentle-float 25s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .hero-decoration {
+    width: min(80vw, 400px);
+    height: min(50vh, 300px);
+    filter: blur(80px);
+  }
+}
+
+/* Enhanced scroll button animations */
+.scroll-button-enhanced {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
+}
+
+.scroll-button-enhanced:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 30px rgba(255, 65, 65, 0.6);
+}
+
+.scroll-button-enhanced:active {
+  transform: scale(1.05);
+}
+
+/* Fix for tab content to prevent layout shifts */
+.tabs-content {
+  min-height: 0;
+  overflow: visible;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-property: color, background-color, border-color, opacity, transform, box-shadow, backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

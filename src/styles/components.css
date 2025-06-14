@@ -1,0 +1,359 @@
+
+/* Component-specific styles */
+
+/* Glass panel effect with enhanced backdrop blur */
+.glass-panel {
+  @apply bg-card/80 backdrop-blur-md border border-border/30 rounded-xl shadow-lg;
+}
+
+.secondary-panel {
+  @apply bg-card/60 backdrop-blur-md shadow-md border border-border/20;
+}
+
+/* Enhanced markdown styling with better typography */
+.enhanced-markdown {
+  font-size: 1.125rem; /* Increased from 1.1rem */
+  line-height: 1.7;
+  color: hsl(var(--muted-foreground));
+}
+
+.enhanced-markdown p {
+  margin-bottom: 0.5rem; /* Reduced spacing */
+  font-size: 1.125rem; /* 18px - larger base font */
+  line-height: 1.7;
+  color: hsl(var(--muted-foreground));
+}
+
+.enhanced-markdown img {
+  margin: 0.75rem auto; /* Reduced spacing */
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15), 0 15px 20px -8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  /* Remove border */
+  border: none;
+}
+
+.enhanced-markdown iframe,
+.enhanced-markdown video,
+.enhanced-markdown embed {
+  margin: 1rem auto; /* Reduced spacing */
+  display: block;
+  max-width: 100%;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15), 0 15px 20px -8px rgba(0, 0, 0, 0.1);
+  border: 1px solid hsl(var(--border) / 0.2);
+}
+
+.enhanced-markdown h1,
+.enhanced-markdown h2,
+.enhanced-markdown h3,
+.enhanced-markdown h4,
+.enhanced-markdown h5,
+.enhanced-markdown h6 {
+  color: hsl(var(--foreground));
+  font-weight: 600;
+  margin-top: 0.75rem; /* Reduced spacing */
+  margin-bottom: 0.375rem; /* Reduced spacing */
+}
+
+.enhanced-markdown h1 {
+  font-size: 2.25rem; /* 36px */
+  font-weight: 700;
+  margin-top: 1rem; /* Reduced spacing */
+  margin-bottom: 0.5rem; /* Reduced spacing */
+  border-bottom: 2px solid hsl(var(--border) / 0.3);
+  padding-bottom: 0.375rem; /* Reduced spacing */
+}
+
+.enhanced-markdown h2 {
+  font-size: 1.875rem; /* 30px */
+  font-weight: 600;
+  margin-top: 0.875rem; /* Reduced spacing */
+  margin-bottom: 0.375rem; /* Reduced spacing */
+  border-bottom: 1px solid hsl(var(--border) / 0.2);
+  padding-bottom: 0.25rem; /* Reduced spacing */
+}
+
+.enhanced-markdown h3 {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 600;
+  margin-top: 0.75rem; /* Reduced spacing */
+  margin-bottom: 0.375rem; /* Reduced spacing */
+}
+
+.enhanced-markdown ul,
+.enhanced-markdown ol {
+  margin-bottom: 0.5rem; /* Reduced spacing */
+  padding-left: 1.5rem;
+  font-size: 1.125rem; /* Larger list text */
+}
+
+.enhanced-markdown li {
+  margin-bottom: 0.125rem; /* Reduced spacing */
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: hsl(var(--muted-foreground));
+}
+
+.enhanced-markdown blockquote {
+  border-left: 4px solid hsl(var(--primary));
+  background: hsl(var(--muted) / 0.2);
+  padding: 0.75rem 1rem; /* Reduced spacing */
+  margin: 0.75rem 0; /* Reduced spacing */
+  font-style: italic;
+  font-size: 1.125rem;
+  border-radius: 0 0.75rem 0.75rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.enhanced-markdown code {
+  background-color: hsl(var(--muted) / 0.7);
+  border: 1px solid hsl(var(--border) / 0.3);
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: hsl(var(--primary));
+  font-weight: 500;
+}
+
+.enhanced-markdown pre {
+  margin: 0.75rem 0; /* Reduced spacing */
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  padding: 1rem; /* Reduced spacing */
+  background: hsl(var(--muted) / 0.5);
+  border: 1px solid hsl(var(--border) / 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.enhanced-markdown pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font-size: 1rem;
+}
+
+.enhanced-markdown table {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid hsl(var(--border) / 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  margin: 0.75rem 0; /* Reduced spacing */
+}
+
+.enhanced-markdown th {
+  background: hsl(var(--muted) / 0.5);
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem; /* Reduced spacing */
+}
+
+.enhanced-markdown td {
+  font-size: 1.125rem;
+  padding: 0.375rem 0.75rem; /* Reduced spacing */
+}
+
+/* Dropdown/Collapsible styling - Fixed arrow issue */
+.enhanced-markdown .dropdown-section {
+  border: 1px solid hsl(var(--border) / 0.3);
+  border-radius: 0.5rem;
+  margin: 0.75rem 0;
+  overflow: hidden;
+  background: hsl(var(--card));
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.enhanced-markdown .dropdown-trigger {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: hsl(var(--muted) / 0.3);
+  border: none;
+  text-align: left;
+  font-weight: 500;
+  font-size: 1rem;
+  color: hsl(var(--foreground));
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.enhanced-markdown .dropdown-trigger:hover {
+  background: hsl(var(--muted) / 0.5);
+}
+
+/* Single arrow with proper positioning and rotation */
+.enhanced-markdown .dropdown-trigger::after {
+  content: "▼";
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+  color: hsl(var(--muted-foreground));
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.enhanced-markdown .dropdown-trigger[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+.enhanced-markdown .dropdown-content {
+  padding: 0.75rem;
+  border-top: 1px solid hsl(var(--border) / 0.2);
+  background: hsl(var(--card));
+}
+
+/* ... keep existing code (all other styles remain the same) */
+
+/* Center text utility */
+.enhanced-markdown .text-center,
+.enhanced-markdown p:has([center]),
+.enhanced-markdown p:has(<center>) {
+  text-align: center !important;
+}
+
+/* Center images utility */
+.enhanced-markdown .img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Text utilities */
+.text-gradient-red {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, #ff6b6b 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Layout utilities */
+.navbar-spacing {
+  padding-top: 8rem;
+}
+
+/* Hover effects - restored red border style */
+.hover-border-red {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid hsl(var(--border) / 0.2);
+}
+
+.hover-border-red:hover {
+  border-color: hsl(var(--primary) / 0.6);
+  box-shadow: 0 0 0 1px hsl(var(--primary) / 0.3);
+}
+
+/* Red border hover for filter dropdowns */
+.red-border-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid hsl(var(--border) / 0.4);
+}
+
+.red-border-hover:hover {
+  border-color: hsl(var(--primary) / 0.6);
+}
+
+/* Button animations */
+.animate-click {
+  transition: transform 0.1s ease;
+}
+
+.animate-click:active {
+  transform: scale(0.98);
+}
+
+/* Dropdown animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.2s ease-out;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Glassmorphism for secondary UI */
+.glass-blur {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Remove flash effects on page load */
+.no-flash {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+/* Scrollbar utilities */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--primary) / 0.6) hsl(var(--secondary) / 0.1);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: hsl(var(--secondary) / 0.1);
+  border-radius: 100vh;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.6);
+  border-radius: 100vh;
+  border: 2px solid hsl(var(--secondary) / 0.1);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.8);
+}
+
+/* Background gradient for radial effects */
+.bg-gradient-radial {
+  background: radial-gradient(ellipse, var(--tw-gradient-stops));
+}
+
+/* Critical inline styles for performance */
+.critical-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,60 @@
+
+/* Preload critical fonts to prevent FOUC */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Import modular CSS files */
+@import url('./styles/base.css');
+@import url('./styles/animations.css');
+@import url('./styles/components.css');
+@import url('./styles/utilities.css');
+@import url('./styles/hover-effects.css');
+@import url('./styles/tiles.css');
+
+/* Prevent flash of unstyled content and force immediate font rendering */
+html {
+  color-scheme: dark;
+  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  font-display: swap;
+}
+
+html.light {
+  color-scheme: light;
+}
+
+/* Force immediate text visibility and styling */
+body {
+  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+  font-display: swap;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left; /* Fix: Reset text alignment to left */
+}
+
+/* Ensure all text renders immediately with fallback fonts */
+* {
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  text-align: inherit; /* Fix: Allow text to inherit proper alignment */
+}
+
+/* Hide scrollbars globally for webkit browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbars for Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent layout shifts during font loading */
+.font-montserrat {
+  font-display: swap;
+}
