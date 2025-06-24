@@ -42,9 +42,7 @@
     @apply bg-background text-foreground;
     font-family: 'Montserrat', sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
-    opacity: 1;
     min-height: 100vh;
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
   }

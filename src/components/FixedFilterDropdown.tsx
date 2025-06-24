@@ -39,7 +39,7 @@ const FixedFilterDropdown = ({
         variant="outline"
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          "w-full justify-between font-montserrat red-border-hover transition-all duration-300",
+          "w-full justify-between font-montserrat transition-all duration-300",
           "border border-border/40 bg-background/80 backdrop-blur-sm",
           isOpen && "border-primary/50"
         )}

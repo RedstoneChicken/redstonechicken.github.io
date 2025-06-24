@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { FileText, ImageIcon, Clock } from "lucide-react";
-import CommonMarkRenderer from "@/components/CommonMarkRenderer";
+import EnhancedMarkdownRenderer from "@/components/EnhancedMarkdownRenderer";
 import ProjectVersionHistory from "./ProjectVersionHistory";
 import ProjectGallery from "./ProjectGallery";
 
@@ -39,15 +39,15 @@ const ProjectContent = ({ project, files, filesLoading }: ProjectContentProps) =
     <div className="section-fade-in-5" style={{ animationDelay: "0.4s" }}>
       <Tabs defaultValue="overview" onValueChange={setActiveTab} value={activeTab} className="w-full">
         <TabsList className="w-full grid grid-cols-3 mb-8 glass-panel rounded-xl">
-          <TabsTrigger value="overview" className="rounded-xl flex items-center gap-2 hover-scale-effect">
+          <TabsTrigger value="overview" className="rounded-xl flex items-center gap-2">
             <FileText className="h-4 w-4" />
             Overview
           </TabsTrigger>
-          <TabsTrigger value="gallery" className="rounded-xl flex items-center gap-2 hover-scale-effect">
+          <TabsTrigger value="gallery" className="rounded-xl flex items-center gap-2">
             <ImageIcon className="h-4 w-4" />
             Gallery
           </TabsTrigger>
-          <TabsTrigger value="changelog" className="rounded-xl flex items-center gap-2 hover-scale-effect">
+          <TabsTrigger value="changelog" className="rounded-xl flex items-center gap-2">
             <Clock className="h-4 w-4" />
             Version History
           </TabsTrigger>
@@ -55,9 +55,8 @@ const ProjectContent = ({ project, files, filesLoading }: ProjectContentProps) =
         
         <div className="min-h-[400px]">
           <TabsContent value="overview" className="animate-fade-in space-y-6 m-0">
-            <CommonMarkRenderer 
+            <EnhancedMarkdownRenderer 
               content={project.description_rich || project.description} 
-              images={project.description_images}
               className="glass-panel p-8 rounded-xl text-left" 
             />
           </TabsContent>

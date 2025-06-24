@@ -1,0 +1,158 @@
+
+/* Dropdown and collapsible component styles */
+
+/* Dropdown/Collapsible styling - Enhanced for formatted content */
+.enhanced-markdown .dropdown-section {
+  border: 1px solid hsl(var(--border) / 0.3);
+  border-radius: 0.5rem;
+  margin: 0.75rem 0;
+  overflow: hidden;
+  background: hsl(var(--card));
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.enhanced-markdown .dropdown-trigger {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: hsl(var(--muted) / 0.3);
+  border: none;
+  text-align: left;
+  font-weight: 500;
+  font-size: 1rem;
+  color: hsl(var(--foreground));
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.enhanced-markdown .dropdown-trigger:hover {
+  background: hsl(var(--muted) / 0.5);
+}
+
+/* Enhanced formatting support for dropdown titles */
+.enhanced-markdown .dropdown-trigger strong {
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.enhanced-markdown .dropdown-trigger em {
+  font-style: italic;
+  color: hsl(var(--primary));
+}
+
+.enhanced-markdown .dropdown-trigger a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.enhanced-markdown .dropdown-trigger a:hover {
+  color: hsl(var(--primary) / 0.8);
+}
+
+.enhanced-markdown .dropdown-trigger code {
+  background: hsl(var(--muted) / 0.5);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  color: hsl(var(--primary));
+}
+
+.enhanced-markdown .dropdown-trigger mark {
+  background: hsl(var(--primary) / 0.2);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.enhanced-markdown .dropdown-trigger del {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+/* Multi-colored text support */
+.enhanced-markdown .dropdown-trigger .text-red-500 { color: #ef4444; }
+.enhanced-markdown .dropdown-trigger .text-green-500 { color: #10b981; }
+.enhanced-markdown .dropdown-trigger .text-blue-500 { color: #3b82f6; }
+.enhanced-markdown .dropdown-trigger .text-yellow-500 { color: #f59e0b; }
+.enhanced-markdown .dropdown-trigger .text-purple-500 { color: #8b5cf6; }
+.enhanced-markdown .dropdown-trigger .text-pink-500 { color: #ec4899; }
+.enhanced-markdown .dropdown-trigger .text-orange-500 { color: #f97316; }
+
+.enhanced-markdown .dropdown-content {
+  padding: 0.75rem;
+  border-top: 1px solid hsl(var(--border) / 0.2);
+  background: hsl(var(--card));
+}
+
+/* Enhanced formatting for dropdown content */
+.enhanced-markdown .dropdown-content p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.enhanced-markdown .dropdown-content strong {
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.enhanced-markdown .dropdown-content em {
+  font-style: italic;
+  color: hsl(var(--primary) / 0.8);
+}
+
+.enhanced-markdown .dropdown-content a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.enhanced-markdown .dropdown-content a:hover {
+  color: hsl(var(--primary) / 0.8);
+}
+
+.enhanced-markdown .dropdown-content code {
+  background: hsl(var(--muted) / 0.5);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  color: hsl(var(--primary));
+}
+
+.enhanced-markdown .dropdown-content mark {
+  background: hsl(var(--primary) / 0.2);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+}
+
+.enhanced-markdown .dropdown-content del {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+/* Multi-colored text support in dropdown content */
+.enhanced-markdown .dropdown-content .text-red-500 { color: #ef4444; }
+.enhanced-markdown .dropdown-content .text-green-500 { color: #10b981; }
+.enhanced-markdown .dropdown-content .text-blue-500 { color: #3b82f6; }
+.enhanced-markdown .dropdown-content .text-yellow-500 { color: #f59e0b; }
+.enhanced-markdown .dropdown-content .text-purple-500 { color: #8b5cf6; }
+.enhanced-markdown .dropdown-content .text-pink-500 { color: #ec4899; }
+.enhanced-markdown .dropdown-content .text-orange-500 { color: #f97316; }
+
+/* Dropdown animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.2s ease-out;
+}

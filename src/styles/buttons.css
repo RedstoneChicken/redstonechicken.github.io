@@ -1,0 +1,32 @@
+
+/* Button and interactive element styles */
+
+/* Button animations */
+.animate-click {
+  transition: transform 0.1s ease;
+}
+
+.animate-click:active {
+  transform: scale(0.98);
+}
+
+/* Hover effects - restored red border style */
+.hover-border-red {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid hsl(var(--border) / 0.2);
+}
+
+.hover-border-red:hover {
+  border-color: hsl(var(--primary) / 0.6);
+  box-shadow: 0 0 0 1px hsl(var(--primary) / 0.3);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}

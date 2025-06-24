@@ -76,12 +76,20 @@ const Navbar = () => {
   
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-500 ease-out border-b border-border/10 ${
         isScrolled 
-          ? 'bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-lg' 
-          : 'bg-transparent'
+          ? 'bg-background/10 backdrop-blur-xl shadow-2xl shadow-primary/5' 
+          : 'bg-background/5 backdrop-blur-lg'
       }`}
+      style={{ 
+        position: 'fixed',
+        top: '0px',
+        zIndex: 9999
+      }}
     >
+      {/* AI-style ambient glow */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 opacity-50" />
+      
       <div className={`max-w-7xl mx-auto transition-all duration-500 relative ${
         isScrolled ? 'px-4 py-2' : 'px-6 py-4'
       }`}>
@@ -89,19 +97,22 @@ const Navbar = () => {
           {/* Logo */}
           <Link 
             to="/" 
-            className="flex items-center space-x-3 transition-all duration-300 p-2 rounded-xl hover:bg-primary/10 min-w-0"
+            className="flex items-center space-x-3 transition-all duration-300 p-2 rounded-xl hover:bg-primary/10 hover:shadow-lg hover:shadow-primary/20 min-w-0 group backdrop-blur-sm"
           >
-            <img 
-              src="https://yt3.googleusercontent.com/ytc/AIdro_mhEBuRNDkRxOWUjeZflxfdyutxSHfzuEOhEAtTW8VVp_I=s900-c-k-c0x00ffffff-no-rj"
-              alt="Redstone Chicken"
-              className={`rounded-xl transition-all duration-300 flex-shrink-0 ${
-                isScrolled ? 'w-8 h-8' : 'w-12 h-12'
-              }`}
-            />
+            <div className="relative">
+              <img 
+                src="https://yt3.googleusercontent.com/ytc/AIdro_mhEBuRNDkRxOWUjeZflxfdyutxSHfzuEOhEAtTW8VVp_I=s900-c-k-c0x00ffffff-no-rj"
+                alt="Redstone Chicken"
+                className={`rounded-xl transition-all duration-300 flex-shrink-0 group-hover:shadow-lg group-hover:shadow-primary/30 ${
+                  isScrolled ? 'w-8 h-8' : 'w-12 h-12'
+                }`}
+              />
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </div>
             {!isMobile && (
               <span 
                 id="navbar-title"
-                className={`font-bold font-montserrat transition-all duration-300 whitespace-nowrap ${
+                className={`font-bold font-montserrat transition-all duration-300 whitespace-nowrap group-hover:text-primary ${
                   isScrolled ? 'text-lg' : 'text-2xl'
                 }`}
               >
@@ -110,8 +121,8 @@ const Navbar = () => {
             )}
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className={`hidden md:flex items-center transition-all duration-500 ${
+          {/* Desktop Navigation - Changed from md:flex to lg:flex */}
+          <div className={`hidden lg:flex items-center transition-all duration-500 ${
             isScrolled ? 'space-x-2' : 'space-x-6'
           }`}>
             {navItems.map((item) => {
@@ -122,61 +133,68 @@ const Navbar = () => {
                   variant={isActive ? "default" : "ghost"}
                   size={isScrolled ? "sm" : "default"}
                   asChild
-                  className={`font-montserrat rounded-xl transition-all duration-300 red-border-hover ${
+                  className={`font-montserrat rounded-xl transition-all duration-300 ${
                     isActive 
-                      ? 'bg-primary text-primary-foreground hover:bg-primary/90 shadow-md' 
-                      : 'hover:bg-primary/10 hover:text-primary'
+                      ? 'shadow-lg shadow-primary/30 border border-primary/30' 
+                      : 'border border-transparent hover:border-primary/20'
                   } ${isScrolled ? 'px-3 py-1.5' : 'px-4 py-2'}`}
                 >
-                  <Link to={item.path} className="flex items-center gap-2">
+                  <Link to={item.path} className="flex items-center gap-2 relative group">
                     <item.icon className="h-4 w-4" />
                     {item.name}
+                    {!isActive && (
+                      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    )}
                   </Link>
                 </Button>
               );
             })}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Changed from md:hidden to lg:hidden */}
           <Button
             variant="ghost"
             size="sm"
-            className="md:hidden rounded-xl transition-all duration-300 hover:bg-primary/10 flex-shrink-0"
+            className="lg:hidden rounded-xl transition-all duration-300 hover:bg-primary/10 hover:shadow-lg hover:shadow-primary/20 flex-shrink-0 backdrop-blur-sm border border-transparent hover:border-primary/20"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
-      </div>
 
-      {/* Mobile Menu - Positioned absolutely to not affect navbar height */}
-      {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-lg animate-slideDown">
-          <div className="px-2 pt-2 pb-3 space-y-1 max-w-7xl mx-auto">
-            {navItems.map((item) => {
-              const isActive = location.pathname === item.path;
-              return (
-                <Button
-                  key={item.name}
-                  variant={isActive ? "default" : "ghost"}
-                  size="sm"
-                  asChild
-                  className={`w-full justify-start font-montserrat rounded-xl transition-all duration-300 transform-gpu ${
-                    isActive 
-                      ? 'bg-primary text-primary-foreground shadow-md' 
-                      : 'hover:bg-primary/10 hover:text-primary hover:scale-[1.02]'
-                  }`}
-                >
-                  <Link to={item.path} className="flex items-center gap-2">
-                    <item.icon className="h-4 w-4" />
-                    {item.name}
-                  </Link>
-                </Button>
-              );
-            })}
+        {/* Mobile Menu - Changed from md:hidden to lg:hidden */}
+        {isMenuOpen && (
+          <div className="lg:hidden bg-background/20 backdrop-blur-xl rounded-b-xl animate-slideDown border border-border/20 shadow-2xl shadow-primary/10 mt-2">
+            <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent rounded-b-xl" />
+            <div className="px-2 pt-2 pb-3 space-y-1 relative">
+              {navItems.map((item) => {
+                const isActive = location.pathname === item.path;
+                return (
+                  <Button
+                    key={item.name}
+                    variant={isActive ? "default" : "ghost"}
+                    size="sm"
+                    asChild
+                    className={`w-full justify-start font-montserrat rounded-xl transition-all duration-300 transform-gpu ${
+                      isActive 
+                        ? 'shadow-lg shadow-primary/30 border border-primary/30' 
+                        : 'border border-transparent hover:border-primary/20 hover:scale-[1.02]'
+                    }`}
+                  >
+                    <Link to={item.path} className="flex items-center gap-2 relative group">
+                      <item.icon className="h-4 w-4" />
+                      {item.name}
+                      {!isActive && (
+                        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      )}
+                    </Link>
+                  </Button>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </nav>
   );
 };

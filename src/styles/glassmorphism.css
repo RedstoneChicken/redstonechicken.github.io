@@ -1,0 +1,23 @@
+
+/* Glassmorphism effects and modern AI-style panels */
+
+/* Glass panel effect with enhanced backdrop blur */
+.glass-panel {
+  @apply bg-card/80 backdrop-blur-md border border-border/30 rounded-xl shadow-lg;
+}
+
+.secondary-panel {
+  @apply bg-card/60 backdrop-blur-md shadow-md border border-border/20;
+}
+
+/* Glassmorphism for secondary UI */
+.glass-blur {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Background gradient for radial effects */
+.bg-gradient-radial {
+  background: radial-gradient(ellipse, var(--tw-gradient-stops));
+}

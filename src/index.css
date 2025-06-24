@@ -9,19 +9,21 @@
 @import url('./styles/utilities.css');
 @import url('./styles/hover-effects.css');
 @import url('./styles/tiles.css');
+@import url('./styles/performance.css');
 
-/* Prevent flash of unstyled content and force immediate font rendering */
+/* Performance-optimized font loading */
 html {
   color-scheme: dark;
   font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
   font-display: swap;
+  scroll-behavior: smooth;
 }
 
 html.light {
   color-scheme: light;
 }
 
-/* Force immediate text visibility and styling */
+/* Optimized body styles for better performance */
 body {
   font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
   color: hsl(var(--foreground));
@@ -30,13 +32,14 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: left; /* Fix: Reset text alignment to left */
+  text-align: left;
 }
 
 /* Ensure all text renders immediately with fallback fonts */
 * {
   font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  text-align: inherit; /* Fix: Allow text to inherit proper alignment */
+  text-align: inherit;
+  box-sizing: border-box;
 }
 
 /* Hide scrollbars globally for webkit browsers */
@@ -49,9 +52,29 @@ body {
   scrollbar-width: none;
 }
 
-/* Smooth scrolling behavior */
+/* Performance-optimized smooth scrolling */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+/* Prevent flash of scrollbar on page load and fix double scrollbar bug */
+html {
+  overflow-y: scroll !important;
+  scroll-behavior: smooth;
+  height: 100%;
+  scrollbar-gutter: stable !important;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll !important;
+  scrollbar-gutter: stable !important;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* Prevent layout shifts during font loading */

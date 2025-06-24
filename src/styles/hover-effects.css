@@ -9,7 +9,6 @@
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border: 2px solid hsl(var(--border) / 0.2);
   /* Fix for blurry scaling */
   transform-origin: center;
   backface-visibility: hidden;
@@ -20,7 +19,6 @@
 .tile-hover-effect:hover {
   transform: scale(1.02) translateZ(0);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  border-color: hsl(var(--primary) / 0.8);
   z-index: 20;
 }
 
@@ -32,7 +30,6 @@
 .interactive-element {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  border: 2px solid hsl(var(--border) / 0.2);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform: translateZ(0);
@@ -40,7 +37,6 @@
 
 .interactive-element:hover {
   transform: translateY(-1px) translateZ(0);
-  border-color: hsl(var(--primary) / 0.8);
 }
 
 .interactive-element:active {
@@ -51,7 +47,6 @@
 .button-hover-effect {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform: scale(1);
-  border: 2px solid hsl(var(--border) / 0.2);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
@@ -59,7 +54,6 @@
 .button-hover-effect:hover {
   transform: scale(1.02) translateZ(0);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  border-color: hsl(var(--primary) / 0.8);
 }
 
 .button-hover-effect:active {
@@ -69,21 +63,18 @@
 /* Navigation hover effects */
 .nav-item-hover {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid transparent;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
 .nav-item-hover:hover {
   background: hsl(var(--primary) / 0.1);
-  border-color: hsl(var(--primary) / 0.6);
   transform: translateY(-1px) translateZ(0);
 }
 
 /* Hover scale utility */
 .hover-scale {
   transition: transform 0.2s ease;
-  border: 2px solid hsl(var(--border) / 0.2);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform: translateZ(0);
@@ -91,28 +82,12 @@
 
 .hover-scale:hover {
   transform: scale(1.02) translateZ(0);
-  border-color: hsl(var(--primary) / 0.8);
-}
-
-/* Hover scale effect for filter dropdowns and UI elements */
-.hover-scale-effect {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid hsl(var(--border) / 0.2);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translateZ(0);
-}
-
-.hover-scale-effect:hover {
-  transform: scale(1.02) translateZ(0);
-  border-color: hsl(var(--primary) / 0.8);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Red border hover - Enhanced for mod tiles and video tiles */
 .red-border-hover {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid hsl(var(--border) / 0.2);
+  border: 1px solid hsl(var(--border) / 0.2);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform: translateZ(0);
@@ -120,7 +95,7 @@
 
 .red-border-hover:hover {
   border-color: hsl(var(--primary) / 0.8);
-  box-shadow: 0 0 0 1px hsl(var(--primary) / 0.3);
+  box-shadow: 0 0 0 2px hsl(var(--primary) / 0.3);
   transform: scale(1.02) translateZ(0);
 }
 
@@ -128,7 +103,7 @@
 .glass-dropdown {
   backdrop-filter: blur(20px);
   background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 

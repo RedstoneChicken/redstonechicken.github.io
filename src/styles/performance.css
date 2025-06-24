@@ -1,0 +1,76 @@
+
+/* Performance optimizations for better FPS */
+
+/* Hardware acceleration for critical elements - removed contain and will-change */
+.gpu-accelerated {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Optimized animations using transform and opacity only */
+@keyframes optimized-fade-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes optimized-scale {
+  from {
+    transform: scale3d(0.95, 0.95, 1);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* Performance-focused utility classes */
+.animate-optimized-fade-in {
+  animation: optimized-fade-in 0.3s ease-out;
+  animation-fill-mode: both;
+}
+
+.animate-optimized-scale {
+  animation: optimized-scale 0.2s ease-out;
+  animation-fill-mode: both;
+}
+
+/* Optimized hover effects */
+.optimized-hover {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate3d(0, 0, 0);
+}
+
+.optimized-hover:hover {
+  transform: translate3d(0, -2px, 0) scale3d(1.02, 1.02, 1);
+}
+
+/* Reduce repaints by using transform instead of margin/padding changes */
+.transform-hover {
+  transition: transform 0.15s ease;
+  transform: translate3d(0, 0, 0);
+}
+
+.transform-hover:hover {
+  transform: translate3d(0, -1px, 0);
+}
+
+/* Image optimization */
+.optimized-image {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+}
+
+/* Performance-critical media queries */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

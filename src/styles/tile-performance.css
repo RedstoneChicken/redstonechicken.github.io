@@ -1,0 +1,85 @@
+
+/* Tile Performance Optimizations */
+
+/* Priority loading for above-the-fold images */
+.priority-load .project-tile-image img,
+.priority-load .video-tile-image img {
+  loading: eager !important;
+}
+
+/* Performance optimizations for all tiles */
+.project-tile, .video-tile {
+  contain: layout style paint;
+  content-visibility: auto;
+  contain-intrinsic-size: 400px 300px;
+}
+
+/* Image loading and error states */
+.tile-image-loading {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tile-image-loaded {
+  opacity: 1;
+}
+
+.tile-image-error {
+  background: hsl(var(--muted));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+}
+
+/* Loading skeleton states */
+.tile-loading-skeleton {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Image optimization classes */
+.optimized-image {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* WebP support detection */
+.webp .project-tile-image img,
+.webp .video-tile-image img {
+  /* Enhanced optimization for WebP-supporting browsers */
+  image-rendering: optimizeQuality;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .project-tile, .video-tile {
+    transition: none;
+  }
+  
+  .project-tile:hover, .video-tile:hover {
+    transform: none;
+  }
+  
+  .project-tile-image img, .video-tile-image img {
+    transition: none;
+  }
+  
+  .project-tile:hover .project-tile-image img,
+  .video-tile:hover .video-tile-image img {
+    transform: none;
+  }
+}

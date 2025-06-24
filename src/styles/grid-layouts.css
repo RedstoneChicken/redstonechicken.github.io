@@ -1,0 +1,69 @@
+
+/* Grid Layouts and Responsive Design */
+
+/* Base grid layout for tiles */
+.tiles-grid {
+  display: grid;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Mobile: 1 column */
+.tiles-grid {
+  grid-template-columns: 1fr;
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 640px) {
+  .tiles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1024px) {
+  .tiles-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Large Desktop: 4 columns */
+@media (min-width: 1280px) {
+  .tiles-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 640px) {
+  .project-tile-title, .video-tile-title {
+    font-size: 1.1rem;
+  }
+  
+  .project-tile-description, .video-tile-description {
+    font-size: 0.85rem;
+  }
+  
+  .project-tile-stats, .video-tile-stats {
+    font-size: 0.75rem;
+  }
+  
+  .project-tile-content, .video-tile-content {
+    padding: 12px;
+  }
+}
+
+/* Responsive adjustments for desktop */
+@media (min-width: 1024px) {
+  .project-tile-title, .video-tile-title {
+    font-size: 1.2rem;
+  }
+  
+  .project-tile-description, .video-tile-description {
+    font-size: 0.95rem;
+  }
+  
+  .project-tile-stats, .video-tile-stats {
+    font-size: 0.85rem;
+  }
+}

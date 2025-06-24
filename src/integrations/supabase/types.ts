@@ -422,6 +422,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      get_service_role_key: {
+        Args: Record<PropertyKey, never>
+        Returns: string
+      }
       my_hourly_function: {
         Args: Record<PropertyKey, never>
         Returns: undefined

@@ -1,0 +1,403 @@
+
+# MARKDOWN REFERENCE - Complete Feature Documentation
+# RedstoneChicken MC Project Description Formatting
+
+This file documents EVERY supported formatting feature for project descriptions.
+All examples below can be used in the `description_rich` field of projects.
+
+================================================================================
+# HEADERS AND TITLES
+================================================================================
+
+# Main Header (H1) - Large title with bottom border
+## Section Header (H2) - Medium title with bottom border  
+### Subsection Header (H3) - Smaller bold title
+#### Sub-subsection Header (H4) - Base size bold title
+##### Minor Header (H5) - Small bold title
+###### Tiny Header (H6) - Extra small bold title
+
+Alternative syntax for H1 and H2:
+Main Header
+===========
+
+Section Header
+--------------
+
+================================================================================
+# TEXT FORMATTING
+================================================================================
+
+**Bold text** - Uses ** or __
+__Also bold text__
+
+*Italic text* - Uses * or _
+_Also italic text_
+
+`Inline code` - Uses backticks for monospace font with background
+
+~~Strikethrough text~~ - Uses ~~
+
+==Highlighted text== - Uses == (if supported)
+
+Combined: **Bold _and italic_ text**
+Combined: ***Bold and italic together***
+
+================================================================================
+# LISTS
+================================================================================
+
+## Unordered Lists (Bullet Points)
+- First item
+- Second item with **bold text**
+- Third item with *italic text*
+- Fourth item with `inline code`
+  - Nested item (indented with 2 spaces)
+  - Another nested item
+    - Double nested item
+- Fifth item with [a link](https://example.com)
+
+Alternative bullet symbols:
+* Using asterisk
++ Using plus sign
+
+## Ordered Lists (Numbered)
+1. First numbered item
+2. Second item with **formatting**
+3. Third item with *emphasis*
+   1. Nested numbered item
+   2. Another nested numbered item
+      1. Triple nested item
+4. Fourth item with `code`
+
+================================================================================
+# LINKS
+================================================================================
+
+[Link Text](https://example.com) - Basic link
+[Link with Title](https://example.com "Hover title") - Link with hover title
+[Internal Link](#section-name) - Link to header section (auto-generated anchors)
+
+Auto-links: https://example.com (automatically converted)
+Email links: mailto:user@example.com
+
+================================================================================
+# IMAGES
+================================================================================
+
+![Alt text](https://example.com/image.jpg) - Basic image
+![Alt text](https://example.com/image.jpg "Image title") - Image with title
+
+## Linked Images (Images that are clickable links)
+[![Alt text](https://example.com/image.jpg)](https://example.com/page.html) - Image as link
+[![Alt text](https://example.com/image.jpg "Image title")](https://example.com/page.html "Link title") - Full syntax
+
+## Image Placeholders (for uploaded project images)
+[image]0 - Uses uploaded image at index 0
+[image]1 - Uses uploaded image at index 1  
+[image]2 - Uses uploaded image at index 2
+
+## External Image URLs
+[image]https://example.com/image.jpg - External image URL
+[img]https://example.com/image.png - Alternative syntax
+
+================================================================================
+# CODE BLOCKS
+================================================================================
+
+## Fenced Code Blocks
+```
+Plain code block without syntax highlighting
+Multiple lines supported
+Preserves spacing and formatting
+```
+
+```javascript
+// JavaScript code with syntax highlighting
+function example() {
+    console.log("Hello World!");
+    return true;
+}
+```
+
+```css
+/* CSS code block */
+.example-class {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+```
+
+```json
+{
+    "name": "Example",
+    "version": "1.0.0",
+    "enabled": true
+}
+```
+
+```bash
+# Bash/Shell commands
+cd minecraft/mods/
+wget https://example.com/mod.jar
+```
+
+## Indented Code Blocks
+    This is an indented code block
+    Use 4 spaces or 1 tab
+    All lines must be indented
+
+================================================================================
+# BLOCKQUOTES
+================================================================================
+
+> Single line blockquote
+
+> Multi-line blockquote
+> with multiple lines
+> all prefixed with >
+
+> **Bold text in blockquotes** works
+> *Italic text* also works
+> `Inline code` in quotes too
+
+> Nested quotes
+>> Are also supported
+>>> With multiple levels
+
+================================================================================
+# COLLAPSIBLE SECTIONS (CUSTOM SYNTAX)
+================================================================================
+
+[dropdown]Section Title
+Content inside the dropdown section.
+This can contain **any markdown formatting**.
+
+- Lists work
+- `Code works`
+- [Links work](https://example.com)
+
+You can have multiple paragraphs.
+
+```javascript
+// Even code blocks work
+console.log("Inside dropdown");
+```
+[/dropdown]
+
+[dropdown]Installation Requirements
+Before installing this pack:
+- Minecraft 1.21.x or higher
+- At least 4GB RAM
+- OptiFine recommended
+[/dropdown]
+
+================================================================================
+# TABLES
+================================================================================
+
+| Feature | Supported | Description |
+|---------|-----------|-------------|
+| Headers | ✅ | All 6 levels |
+| Lists | ✅ | Ordered and unordered |
+| Code | ✅ | Inline and blocks |
+| Links | ✅ | Internal and external |
+
+Left aligned | Center aligned | Right aligned
+:--- | :---: | ---:
+Left | Center | Right
+Text | Text | Text
+
+================================================================================
+# HORIZONTAL RULES (SEPARATORS)
+================================================================================
+
+Three or more dashes:
+---
+
+Three or more asterisks:
+***
+
+Three or more underscores:
+___
+
+================================================================================
+# HTML SUPPORT
+================================================================================
+
+Raw HTML tags are supported:
+<strong>HTML bold</strong>
+<em>HTML italic</em>
+<u>Underlined text</u>
+<mark>Highlighted text</mark>
+
+<div style="background: #333; padding: 1rem; color: white;">
+Custom styled div with CSS
+</div>
+
+<details>
+<summary>HTML Details/Summary</summary>
+Hidden content revealed when clicked
+</details>
+
+<br> - Line break
+<hr> - Horizontal rule
+
+================================================================================
+# SPECIAL ELEMENTS
+================================================================================
+
+## Alert Boxes (if supported)
+[!INFO] Information message
+[!WARNING] Warning message  
+[!ERROR] Error message
+[!SUCCESS] Success message
+
+## Centered Content (if supported)
+[CENTER]This text will be centered[/CENTER]
+
+## Media Embeds (if supported)
+[media]https://youtube.com/embed/VIDEO_ID
+[video]https://youtube.com/embed/VIDEO_ID
+
+================================================================================
+# LINE BREAKS AND SPACING
+================================================================================
+
+Single line break - just press enter once
+No visual break in output
+
+Double line break - press enter twice
+
+Creates paragraph separation
+
+Two spaces at end of line  
+Creates a line break within paragraph
+
+================================================================================
+# ESCAPING SPECIAL CHARACTERS
+================================================================================
+
+Use backslash to escape special characters:
+\*Not italic\*
+\**Not bold\**
+\`Not code\`
+\[Not a link\](url)
+\![Not an image\](url)
+
+================================================================================
+# NESTED AND COMBINED FORMATTING
+================================================================================
+
+Complex combinations:
+**Bold with *italic inside* text**
+*Italic with **bold inside** text*
+`Code with **bold** inside` (bold won't work in code)
+[**Bold link text**](https://example.com)
+[![**Bold alt text**](image.jpg)](https://example.com)
+
+Lists with complex formatting:
+1. **Item with bold**
+   - Nested with *italic*
+   - And `code`
+   - Plus [links](https://example.com)
+
+================================================================================
+# REAL-WORLD EXAMPLE
+================================================================================
+
+# 🎮 Minecraft Redstone Enhancement Pack
+
+**Version:** 2.1.0  
+**Compatibility:** Minecraft 1.21.x  
+**Author:** RedstoneChicken
+
+---
+
+## 📋 Overview
+
+This pack enhances your *technical Minecraft* experience with **advanced redstone components** and improved mechanics.
+
+### ⚡ Key Features
+
+- **Advanced Logic Gates**: AND, OR, XOR, NOT gates
+- **Wireless Redstone**: No more long redstone trails!
+- **Precision Timing**: Exact delays and pulse control
+- **Signal Processing**: Amplifiers and filters
+
+[dropdown]📥 Installation Guide
+1. Download the pack from the link above
+2. Open Minecraft Launcher
+3. Navigate to your mods folder
+4. Place the `.jar` file in the mods directory
+5. **Launch Minecraft** and verify in mods menu
+
+```bash
+# Advanced installation via command line
+cd ~/.minecraft/mods/
+wget https://example.com/redstone-pack.jar
+```
+
+> **Important:** Backup your world before installation!
+[/dropdown]
+
+### 🔧 Configuration
+
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `enableWireless` | `true` | Enable wireless redstone |
+| `maxRange` | `64` | Maximum signal range |
+| `performanceMode` | `false` | Optimize for slower PCs |
+
+For support, visit our [Discord](https://discord.com/redstone) or check the [documentation](https://docs.redstone.com).
+
+![Pack Preview](https://example.com/preview.jpg "Redstone Pack Preview")
+
+---
+
+*Thank you for downloading! Happy building! 🏗️*
+
+================================================================================
+# IMPLEMENTATION NOTES
+================================================================================
+
+Rendering Engine: EnhancedMarkdownRenderer
+Parser Location: src/components/markdown/
+Supported in: description_rich field of projects
+
+Block Parsers:
+- HeadingParser.tsx - Headers (# ## ###)
+- CodeBlockParser.tsx - Code blocks (``` and indented)
+- ListParser.tsx - Ordered and unordered lists
+- BlockquoteParser.tsx - Quote blocks (>)
+- HtmlParser.tsx - Raw HTML content
+- ParagraphParser.tsx - Regular text paragraphs
+- DropdownParser.tsx - Custom [dropdown] sections
+
+Inline Parsers:
+- Strong/Bold (**text**, __text__)
+- Emphasis/Italic (*text*, _text_)
+- Inline code (`text`)
+- Links ([text](url))
+- Images (![alt](src))
+- Linked images ([![alt](src)](url))
+- HTML tags (<tag>content</tag>)
+
+Special Features:
+- Collapsible sections with [dropdown] syntax
+- Image placeholder system for uploaded project images
+- External image URL support
+- Auto-linking for URLs
+- Table support with alignment
+- HTML integration for custom styling
+- Escape character support with backslash
+
+CSS Classes Applied:
+- Headers: Various text sizes with text-primary color
+- Code: bg-muted background with font-mono
+- Links: text-primary with hover effects
+- Images: max-w-full h-auto rounded-lg
+- Blockquotes: border-l-4 border-primary/30 with muted background
+- Lists: Proper spacing and indentation
+
+All features are fully responsive and support dark/light themes.

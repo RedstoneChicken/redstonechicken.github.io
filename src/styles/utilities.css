@@ -1,222 +1,64 @@
 
-/* Utility classes and effects */
+/* Utility classes and helpers */
 
-/* Hover and interactive effects */
-.interactive-element {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  border: 2px solid hsl(var(--border) / 0.2);
+/* Text utilities */
+.text-gradient-red {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, #ff6b6b 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.interactive-element:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  border-color: hsl(var(--primary) / 0.8);
+/* Layout utilities */
+.navbar-spacing {
+  padding-top: 8rem;
 }
 
-.interactive-element:active {
-  transform: translateY(0);
-}
-
-.hover-scale {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid hsl(var(--border) / 0.2);
-}
-
-.hover-scale:hover {
-  transform: scale(1.03);
-  z-index: 10;
-  border-color: hsl(var(--primary) / 0.8);
-}
-
-.hover-scale:active {
-  transform: scale(0.98);
-}
-
-/* No hover effects for specific elements */
-.no-hover {
-  transition: none !important;
-}
-
-.no-hover:hover {
+/* Remove flash effects on page load */
+.no-flash {
+  opacity: 1 !important;
   transform: none !important;
-  box-shadow: none !important;
-  border-color: inherit !important;
+  animation: none !important;
 }
 
-/* Red border effect - updated with thicker border */
-.red-border-hover {
-  position: relative;
-  border: 2px solid hsl(var(--border) / 0.3);
-  transition: all 0.3s ease;
+/* Scrollbar utilities */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--primary) / 0.6) hsl(var(--secondary) / 0.1);
 }
 
-.red-border-hover:hover {
-  border-color: hsl(var(--primary) / 0.8);
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
 
-/* Primary button styles - removed red-glow, using red border instead */
-.primary-button {
-  @apply bg-primary hover:bg-primary/90 border-2 border-primary hover:border-primary/90 shadow-lg rounded-xl;
-  transition: all 0.3s ease;
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: hsl(var(--secondary) / 0.1);
+  border-radius: 100vh;
 }
 
-.primary-button:hover {
-  transform: translateY(-1px);
-  border-color: hsl(var(--primary) / 0.8);
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.6);
+  border-radius: 100vh;
+  border: 2px solid hsl(var(--secondary) / 0.1);
 }
 
-/* Navigation effects */
-.nav-item-hover {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid transparent;
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.8);
 }
 
-.nav-item-hover:hover {
-  background: hsl(var(--primary) / 0.1);
-  border-color: hsl(var(--primary) / 0.6);
-  transform: translateY(-1px);
+/* Critical inline styles for performance */
+.critical-fade-in {
+  animation: fade-in 0.6s ease-out;
 }
 
-/* Markdown content styles */
-.markdown-content {
-  max-width: none;
-  color: hsl(var(--foreground));
-  line-height: 1.7;
-}
-
-.markdown-content h1 {
-  @apply text-2xl font-bold mt-8 mb-6 text-primary;
-}
-
-.markdown-content h2 {
-  @apply text-xl font-bold mt-6 mb-4 text-primary;
-}
-
-.markdown-content h3 {
-  @apply text-lg font-semibold mt-4 mb-3 text-primary;
-}
-
-.markdown-content p {
-  @apply mb-4 text-muted-foreground leading-relaxed;
-}
-
-.markdown-content ul, .markdown-content ol {
-  @apply mb-4 space-y-1 text-muted-foreground pl-6;
-}
-
-.markdown-content ul {
-  list-style-type: disc;
-}
-
-.markdown-content ol {
-  list-style-type: decimal;
-}
-
-.markdown-content li {
-  @apply mb-1;
-}
-
-.markdown-content strong {
-  @apply text-foreground font-semibold;
-}
-
-.markdown-content em {
-  @apply italic text-primary/80;
-}
-
-.markdown-content code {
-  @apply bg-muted/50 px-2 py-1 rounded text-sm font-mono text-primary;
-}
-
-.markdown-content pre {
-  @apply bg-muted/50 p-4 rounded-lg overflow-x-auto mb-4;
-}
-
-.markdown-content pre code {
-  @apply bg-transparent p-0;
-}
-
-.markdown-content blockquote {
-  @apply border-l-4 border-primary/30 pl-4 my-4 text-muted-foreground italic;
-}
-
-.markdown-content a {
-  @apply text-primary hover:text-primary/80 underline decoration-primary/50 hover:decoration-primary transition-colors;
-}
-
-.markdown-content img {
-  @apply rounded-lg shadow-lg max-w-full h-auto my-6;
-}
-
-.markdown-content table {
-  @apply w-full border-collapse my-6;
-}
-
-.markdown-content th,
-.markdown-content td {
-  @apply px-4 py-2 text-left;
-}
-
-.markdown-content th {
-  @apply bg-muted/50 font-semibold text-foreground;
-}
-
-.markdown-content hr {
-  @apply my-8;
-}
-
-/* Fullscreen overlay */
-.fullscreen-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(20px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  animation: fade-in 0.3s ease-out;
-}
-
-.fullscreen-image {
-  max-width: 90vw;
-  max-height: 90vh;
-  border-radius: 16px;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
-}
-
-.fullscreen-close {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-  color: white;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: 2px solid hsl(var(--border));
-}
-
-.fullscreen-close:hover {
-  background: rgba(0, 0, 0, 0.9);
-  border-color: hsl(var(--primary));
-  transform: scale(1.1);
-}
-
-/* Prevent text selection on interactive elements */
-.no-select {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

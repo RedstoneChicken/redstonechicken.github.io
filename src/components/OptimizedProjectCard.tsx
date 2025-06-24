@@ -3,8 +3,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Download, Calendar, Clock, Star } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
+import { useState, useRef, useCallback, memo } from "react";
+import PerformanceOptimizedImage from "./PerformanceOptimizedImage";
 
 interface Project {
   id: string;
@@ -23,10 +24,13 @@ interface ProjectCardProps {
   project: Project;
   loading?: boolean;
   className?: string;
+  priority?: boolean;
 }
 
-const OptimizedProjectCard = ({ project, loading = false, className }: ProjectCardProps) => {
-  const formatTimeAgo = (dateString: string) => {
+const OptimizedProjectCard = memo(({ project, loading = false, className, priority = false }: ProjectCardProps) => {
+  const [imageError, setImageError] = useState(false);
+
+  const formatTimeAgo = useCallback((dateString: string) => {
     const date = new Date(dateString);
     const now = new Date();
     const diffTime = Math.abs(now.getTime() - date.getTime());
@@ -45,14 +49,18 @@ const OptimizedProjectCard = ({ project, loading = false, className }: ProjectCa
     }
     const years = Math.floor(diffDays / 365);
     return `Updated ${years} year${years > 1 ? 's' : ''} ago`;
-  };
+  }, []);
+
+  const handleImageError = useCallback(() => {
+    setImageError(true);
+  }, []);
 
   if (loading) {
     return (
-      <div className={cn("w-full", className)}>
+      <div className={cn("w-full performance-container", className)}>
         <div className="project-tile glass-panel consistent-tile-height">
           <div className="project-tile-image">
-            <div className="w-full h-full bg-muted animate-pulse" />
+            <div className="w-full h-full bg-muted animate-pulse gpu-accelerated" />
           </div>
           <div className="project-tile-content">
             <div className="h-6 bg-muted rounded animate-pulse mb-2" />
@@ -69,28 +77,29 @@ const OptimizedProjectCard = ({ project, loading = false, className }: ProjectCa
     );
   }
 
-  // Ensure we have a valid slug, fallback to id if needed
   const projectSlug = project.slug || project.id;
+  const fallbackImageUrl = `https://source.unsplash.com/400x225?minecraft&${project.id}`;
+  const imageUrl = project.image_url || fallbackImageUrl;
 
   return (
-    <div className={cn("w-full", className)}>
+    <div className={cn("w-full performance-container", className)}>
       <Link to={`/project/${projectSlug}`} className="block w-full">
-        <div className="project-tile glass-panel consistent-tile-height">
-          {/* Image Container */}
+        <div className="project-tile glass-panel consistent-tile-height optimized-hover gpu-accelerated">
           <div className="project-tile-image">
-            <img
-              src={project.image_url || `https://source.unsplash.com/random/400x300?minecraft&${project.id}`}
-              alt={project.name}
-              loading="lazy"
-              style={{ objectFit: 'contain' }}
+            <PerformanceOptimizedImage
+              src={imageError ? fallbackImageUrl : imageUrl}
+              alt={`${project.name} - ${project.type === 'mod' ? 'Minecraft Addon' : 'Texture Pack'}`}
+              width={400}
+              height={225}
+              priority={priority}
+              onError={handleImageError}
+              className="w-full h-full object-cover"
             />
             
-            {/* Type Badge */}
             <Badge className="project-tile-badge-type">
               {project.type === 'mod' ? 'Addon' : 'Texture Pack'}
             </Badge>
 
-            {/* Featured Badge with Star Icon */}
             {project.featured && (
               <Badge className="project-tile-badge-featured">
                 <Star className="h-3 w-3 fill-current" />
@@ -99,8 +108,7 @@ const OptimizedProjectCard = ({ project, loading = false, className }: ProjectCa
             )}
           </div>
 
-          {/* Content Section */}
-          <div className="project-tile-content">
+          <div className="project-tile-content stable-layout">
             <h3 className="project-tile-title">
               {project.name}
             </h3>
@@ -108,10 +116,8 @@ const OptimizedProjectCard = ({ project, loading = false, className }: ProjectCa
               {project.short_description}
             </p>
             
-            {/* Divider Line */}
             <div className="project-tile-divider"></div>
             
-            {/* Bottom Stats Row */}
             <div className="project-tile-stats">
               <div className="project-tile-stat">
                 <Clock className="project-tile-stat-icon" />
@@ -127,6 +133,8 @@ const OptimizedProjectCard = ({ project, loading = false, className }: ProjectCa
       </Link>
     </div>
   );
-};
+});
+
+OptimizedProjectCard.displayName = 'OptimizedProjectCard';
 
 export default OptimizedProjectCard;

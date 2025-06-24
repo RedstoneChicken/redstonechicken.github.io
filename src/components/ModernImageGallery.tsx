@@ -1,8 +1,7 @@
 
 import { useState } from "react";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import CustomImageDialog from "@/components/CustomImageDialog";
 import { Maximize } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 interface MediaItem {
   url: string;
@@ -16,41 +15,31 @@ interface ModernImageGalleryProps {
 }
 
 const ModernImageGallery = ({ media, variant = "grid" }: ModernImageGalleryProps) => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
   if (variant === "inline") {
     return (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {media.map((item, index) => (
-          <Dialog key={index}>
-            <DialogTrigger asChild>
-              <button 
-                className="group relative overflow-hidden rounded-lg hover:scale-[1.02] transition-all duration-300"
-                onClick={() => setSelectedImage(item.url)}
-              >
+          <CustomImageDialog
+            key={index}
+            imageUrl={item.url}
+            alt={item.description}
+            trigger={
+              <button className="group relative overflow-hidden rounded-lg hover:scale-[1.02] transition-all duration-300">
                 <div className="aspect-video">
                   <img
                     src={item.url}
                     alt={item.description}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                   <Maximize className="h-8 w-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
               </button>
-            </DialogTrigger>
-            {/* Step 4: Larger close button for touch-friendly interaction */}
-            <DialogContent className="max-w-7xl w-[95vw] max-h-[95vh] p-0 bg-background/95 backdrop-blur-md overflow-hidden border-none">
-              <div className="w-full h-full flex items-center justify-center p-4 relative">
-                <img
-                  src={item.url}
-                  alt={item.description}
-                  className="max-w-full max-h-full object-contain"
-                />
-              </div>
-            </DialogContent>
-          </Dialog>
+            }
+          />
         ))}
       </div>
     );
@@ -58,20 +47,21 @@ const ModernImageGallery = ({ media, variant = "grid" }: ModernImageGalleryProps
 
   return (
     <div className="space-y-4">
-      {/* Grid layout for default variant */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {media.map((item, index) => (
-          <Dialog key={index}>
-            <DialogTrigger asChild>
-              <button 
-                className="group relative overflow-hidden rounded-lg hover:scale-[1.02] transition-all duration-300"
-                onClick={() => setSelectedImage(item.url)}
-              >
+          <CustomImageDialog
+            key={index}
+            imageUrl={item.url}
+            alt={item.description}
+            trigger={
+              <button className="group relative overflow-hidden rounded-lg hover:scale-[1.02] transition-all duration-300">
                 <div className="aspect-video">
                   <img
                     src={item.url}
                     alt={item.description}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
@@ -81,18 +71,8 @@ const ModernImageGallery = ({ media, variant = "grid" }: ModernImageGalleryProps
                   <p className="text-white text-sm font-medium">{item.description}</p>
                 </div>
               </button>
-            </DialogTrigger>
-            {/* Step 4: Larger close button for touch-friendly interaction */}
-            <DialogContent className="max-w-7xl w-[95vw] max-h-[95vh] p-0 bg-background/95 backdrop-blur-md overflow-hidden border-none">
-              <div className="w-full h-full flex items-center justify-center p-4 relative">
-                <img
-                  src={item.url}
-                  alt={item.description}
-                  className="max-w-full max-h-full object-contain"
-                />
-              </div>
-            </DialogContent>
-          </Dialog>
+            }
+          />
         ))}
       </div>
     </div>
